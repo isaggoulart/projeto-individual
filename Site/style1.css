@@ -1,0 +1,125 @@
+body {
+    background-color: #E4EDE2;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    margin: auto;
+  }
+
+.header {
+    height: 80px;
+    border-bottom: 2px solid #459B69;
+  }
+  
+  .header .container {
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    background-color: #459B69;
+  }
+  
+  .header a {
+    text-decoration: none;
+    color: #1F2832;
+  }
+  
+  .navbar {
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    color: #1F2832;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left: 600px;
+  }  
+
+.tudo {
+    width: 100%;
+    height: 95vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tudo .container .titulo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-family: "Chewy", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 22px;
+    letter-spacing: 5px;
+}
+
+.tudo .container {
+    display: flex;
+    flex-direction: column;
+    width: 45vw;
+    height: 65vh;
+    background-color: #459B69;
+    border-radius: 20px;
+}
+
+.tudo .container .formulario {
+    display: flex;
+    width: 45vw;
+    height: 65vh;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.esquerda {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 25%;
+    height: 40vh;
+}
+
+.direita {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 25%;
+    height: 40vh;
+}
+
+input {
+    border-radius: 20px;
+    width: 14vw;
+    height: 5vh;
+    border: none;
+    background-color: #E4EDE2;
+    padding: 3px;
+    padding-left: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    letter-spacing: 1px;
+}
+
+.container .botao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.botao button {
+    width: 20%;
+    height: 6vh;
+    border-radius: 20px;
+    font-size: 18px;
+    border: none;
+    color: #1F2832;
+    background-color: #FAC420;
+    font-family: "Chewy", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
