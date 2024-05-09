@@ -162,7 +162,7 @@ input {
 .tudo .container2 {
   display: flex;
   flex-direction: column;
-  width: 33vw;
+  width: 35vw;
   height: 55vh;
   background-color: #459B69;
   border-radius: 20px;
@@ -175,7 +175,7 @@ input {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  padding-bottom: 20PX;
+  padding-bottom: 20px;
 }
 
 .container2 .botao {
