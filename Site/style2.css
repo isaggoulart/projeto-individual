@@ -9,27 +9,27 @@ body {
 .container {
     display: flex;
     width: 100%;
-  }
+}
 
 .header {
     height: 70px;
     border-bottom: 2px solid #459B69;
     display: flex;
-  }
-  
-  .header .container {
+}
+
+.header .container {
     justify-content: space-between;
     align-items: center;
     height: 100%;
     background-color: #459B69;
-  }
-  
-  .header a {
+}
+
+.header a {
     text-decoration: none;
     color: #1F2832;
-  }
-  
-  .navbar {
+}
+
+.navbar {
     width: 700px;
     display: flex;
     align-items: center;
@@ -39,9 +39,9 @@ body {
     font-size: 16px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin-right: 50px;
-  }  
+}
 
-  .navbar button {
+.navbar button {
     width: 15%;
     height: 6vh;
     border-radius: 20px;
@@ -53,13 +53,13 @@ body {
     font-family: "Chewy", system-ui;
     font-weight: 400;
     font-style: normal;
-  }
+}
 
-  .container img {
+.container img {
     width: 160px;
     height: 100px;
     margin-top: 20px;
-  }
+}
 
 
 .banner {
@@ -86,7 +86,7 @@ body {
     height: 90vh;
     z-index: 0;
     position: absolute;
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0, 0, 0, 0.7);
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -131,15 +131,136 @@ body {
     align-items: center;
 }
 
-.banner img{
+.banner img {
     width: 800px;
     height: 500px;
 }
 
-
 .contexto {
-    width: 1100px;
-    height: 100vh;
+    width: 1500px;
+    height: 102vh;
+    color: #1F2832;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.social {
+    width: 95vw;
+    height: 85vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 
+.contexto .social .card {
+    width: 24vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 67vh;
+    text-align: center;
+    font-size: 20px;
+    border: solid 3px #FAC420;
+    border-radius: 20px;
+}
+
+.contexto .social .card p {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.social .card img {
+    width: 400px;
+}
+
+.bordas {
+    width: 21vw;
+    height: 50vh;
+    border: solid 3px;
+}
+
+.contexto .titulo {
+    width: 1500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contexto h1 {
+    font-size: 50px;
+    font-family: "Chewy", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 2px;
+    padding-top: 20px;
+}
+
+.geral {
+    width: 98vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.dicas {
+    width: 98vw;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 20px;
+    text-indent: 50px;
+    text-align: justify;
+}
+
+.dicas h1 {
+    font-size: 50px;
+    font-family: "Chewy", system-ui;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: #1F2832;
+}
+
+.dicas .container {
+    width: 70vw;
+    height: 300vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.diquinha {
+    width: 100%;
+    font-size: 20px;
+}
+
+.swiper {
+    width: 1000px;
+    height: 400px;
+    border-radius: 20px;
+}
+
+.swiper-slide {
+    display: flex;
+    border-radius: 20px;
+    background-color: #459B69;
+    padding: 30px;
+    padding-top: 60px;
+}
+
+.swiper-slide .diquinha {
+    text-align: center;
+    width: 800px;
+    padding-left: 70px;
+}
+
+div.swiper-button-prev,
+div.swiper-button-next {
+    color: #1F2832;
+}

@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 
 <body>
@@ -58,9 +60,84 @@
         </div>
     </div>
     <div class="contexto">
-        
+        <div class="titulo">
+            <h1>CONTEXTO</h1>
+        </div>
+        <div class="social">
+            <div class="card">
+                <img src="iconeReprovado.png">
+                <p>Um estudo realizado por uma rede de supermercados britânica aponta que 1 em cada 3 estudantes não
+                    sabem nem cozinhar um ovo, e 1 em cada 2 não saberiam nem por onde começar a fazer um macarrão com
+                    carne moída. </p>
+            </div>
+            <div class="card">
+                <img src="iconeCarrinho.png">
+                <p>Caso não haja nenhuma base na cozinha, o padrão é as pessoas correrem para comidas prontas, seja
+                    de restaurantes ou de supermercados. Esse pode ser o gatilho para o desenvolvimento de alguma
+                    compulsão alimentar, ou até mesmo obesidade e diabetes. </p>
+            </div>
+            <div class="card">
+                <img src="iconeChef.png">
+                <p> A minha mãe costumava me dizer que quem não dirige e não cozinha nunca conseguirá ser
+                    verdadeiramente independente, pois são ambas funções que ou você sabe, ou precisa de alguém para
+                    fazer por você. Não há meio termo. Hoje em dia, sabendo ambos, posso afirmar que ela tinha razão.
+                </p>
+            </div>
+        </div>
     </div>
+    <div class="geral">
+    <div class="dicas">
+        <h1>DICAS</h1>
+        <div class="container">
+            <div class="inicio">
+                <p>Agora que você já sabe a importância e a relevância de saber cozinhar, nem que seja só o básico, você
+                    deve estar se perguntando "mas por onde eu começo?". E para isso eu tenho a resposta: começa por
+                    aqui! Dá uma olhada nessas dicas coringa que vão te ajudar a perder o medo do fogão, do forno, e dos
+                    utensílios da cozinha.</p>
+            </div>
+        </div>
+    </div>
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="diquinha">
+                    <h1>Paciência</h1>
+                    <p>Inicialmente, o que todo o culinário novato precisa é só paciência e vontade de aprender.
+                        Lembre-se
+                        de que se você não sabe nem fritar um ovo, não é do dia pra noite que você fará aquelas
+                        receitas
+                        dignas de reality shows de culinária, então calma, combinado?</p>
+                </div>
+            </div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+            ...
+        </div>
+        <div class="swiper-pagination"></div>
 
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+</div>
 </body>
 
 </html>
+
+<script>
+    const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+
+        // If we need pagination
+        pagination: {
+            el: '.swiper-pagination',
+        },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        }
+    });
+</script>
