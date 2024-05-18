@@ -1,5 +1,5 @@
 body {
-    background-image: url(fundo2.png);
+    background-image: url(imagens/fundo2.png);
     background-size: contain;
     padding: 0;
     margin: 0;
@@ -69,7 +69,7 @@ body {
     justify-content: center;
     align-items: center;
     color: #1F2832;
-    background-image: url(banner.png);
+    background-image: url(imagens/banner.png);
     background-size: cover;
     z-index: -1;
 }
@@ -174,7 +174,7 @@ body {
 .contexto .infos2 .curiosidade {
     width: 40vw;
     height: 45vh;
-    background-image: url(curiosidade.jpg);
+    background-image: url(imagens/curiosidade.jpg);
     background-size: cover;
     border-radius: 20px;
     font-size: 19px;
@@ -253,7 +253,7 @@ body {
 
 .geral {
     width: 98vw;
-    height: 100vh;
+    height: 85vh;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -267,8 +267,6 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    font-size: 21px;
-    text-align: center;
 }
 
 .dicas h1 {
@@ -285,6 +283,9 @@ body {
     display: flex;
     flex-direction: column;
     line-height: 30px;
+    font-size: 21px;
+    text-align: justify;
+    text-indent: 50px;
 }
 
 .diquinha {
@@ -301,7 +302,7 @@ body {
 .swiper-slide {
     display: flex;
     border-radius: 20px;
-    background-color: #459B69;
+    background-color: #459b69;
     padding-top: 10px;
 }
 
@@ -311,7 +312,96 @@ body {
     padding-left: 100px;
 }
 
+.swiper-slide .diquinha h2 {
+    color: #fff
+}
+
 div.swiper-button-prev,
 div.swiper-button-next {
     color: #1F2832;
+}
+
+.receitas {
+    height: 85vh;
+    width: 98vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.receitas .mensagem {
+    width: 90vw;
+    height: 70vh;
+    border: solid 3px #FAC420;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.receitas .mensagem .imagemLivro {
+    width: 40vw;
+    height: 50vh;
+    background-color: #459B69;
+}
+
+.receitas .mensagem .mensagenzinha {
+    width: 38vw;
+    height: 50vh;
+    font-size: 21px;
+    text-align: justify;
+    text-indent: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.receitas .mensagem .mensagenzinha button {
+    width: 60%;
+    height: 8vh;
+    border-radius: 30px;
+    font-size: 25px;
+    border: none;
+    color: #1F2832;
+    margin-left: 10px;
+    background-color: #FAC420;
+    font-family: "Chewy", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 1px;
+}
+
+.sobreMim {
+    height: 100vh;
+    width: 98vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.sobreMim .conjuntoSobreMim {
+    width: 98vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.sobreMim .conjuntoSobreMim .foto {
+    width: 40vw;
+    height: 53vh;
+    background-color: #459B69;
+    border-radius: 20px;
+}
+
+.sobreMim .conjuntoSobreMim .mensagem {
+    width: 40vw;
+    font-size: 21px;
+    line-height: 30px;
+    text-align: justify;
+    text-indent: 50px;
+    margin: none;
 }
