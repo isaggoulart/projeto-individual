@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ptbr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,10 +10,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
     <title>Dashboard</title>
 </head>
+
 <body>
     <div class="header">
         <div class="container">
-            <img src="Logo.png">
+            <img src="imagens/Logo.png">
             <ul class="navbar">
                 <li>
                     <a href="">Home</a>
@@ -38,5 +40,611 @@
             </ul>
         </div>
     </div>
+    <div class="home">
+
+
+
+    </div>
+    <div class="receitas">
+        <div class="titulo">
+            <span>RECEITAS</span>
+        </div>
+        <div class="opcoes">
+            <div class="doces">
+                <h2>DOCES</h2>
+                <button onclick="r1()">Nega Maluca</button>
+                <button onclick="r2()">Cueca Virada</button>
+                <button onclick="r3()">Bolo de cenoura</button>
+                <button onclick="r4()">Bolo de fubá</button>
+                <button onclick="r5()">Cuca de banana</button>
+                <button onclick="r6()">Toalha felpuda</button>
+                <button onclick="r7()">Bolo mármore</button>
+                <button onclick="r8()">Bolinho de chuva</button>
+                <button onclick="r9()">Bolacha caseira</button>
+                <button onclick="r10()">Bolo de banana caramelizada</button>
+            </div>
+            <div class="salgados">
+                <h2>SALGADOS</h2>
+                <button onclick="r11()">Pão de queijo</button>
+                <button onclick="r12()">Salada de batata</button>
+                <button onclick="r13()">Salada de macarrão</button>
+                <button onclick="r14()">Arroz carreteiro</button>
+                <button onclick="r15()">Carne moída à cavalo</button>
+                <button onclick="r16()">Pão de batata</button>
+                <button onclick="r17()">Risoto de abóbora com carne moída</button>
+                <button onclick="r18()">Macarrão atolado com frango</button>
+                <button onclick="r19()">Lasanha de frango</button>
+                <button onclick="r20()">Panqueca de carne moída</button>
+            </div>
+        </div>
+    </div>
+    <div class="descricao" id="descricao">
+        <div class=receita id="receita1"></div>
+        <div class=receita id="receita2"></div>
+        <div class=receita id="receita3"></div>
+        <div class=receita id="receita4"></div>
+        <div class=receita id="receita5"></div>
+        <div class=receita id="receita6"></div>
+        <div class=receita id="receita7"></div>
+        <div class=receita id="receita8"></div>
+        <div class=receita id="receita9"></div>
+        <div class=receita id="receita10"></div>
+        <div class=receita id="receita11"></div>
+        <div class=receita id="receita12"></div>
+        <div class=receita id="receita13"></div>
+        <div class=receita id="receita14"></div>
+        <div class=receita id="receita15"></div>
+        <div class=receita id="receita16"></div>
+        <div class=receita id="receita17"></div>
+        <div class=receita id="receita18"></div>
+        <div class=receita id="receita19"></div>
+        <div class=receita id="receita20"></div>
+    </div>
 </body>
+
 </html>
+
+<script>
+    descricao.style.display = 'none';
+    receita1.style.display = 'none';
+    receita2.style.display = 'none';
+    receita3.style.display = 'none';
+    receita4.style.display = 'none';
+    receita5.style.display = 'none';
+    receita6.style.display = 'none';
+    receita7.style.display = 'none';
+    receita8.style.display = 'none';
+    receita9.style.display = 'none';
+    receita10.style.display = 'none';
+    receita11.style.display = 'none';
+    receita12.style.display = 'none';
+    receita13.style.display = 'none';
+    receita14.style.display = 'none';
+    receita15.style.display = 'none';
+    receita16.style.display = 'none';
+    receita17.style.display = 'none';
+    receita18.style.display = 'none';
+    receita19.style.display = 'none';
+    receita20.style.display = 'none';
+
+    function r1() {
+        descricao.style.display = 'block';
+        receita1.style.display = 'block';
+        receita2.style.display = 'none';
+        receita3.style.display = 'none';
+        receita4.style.display = 'none';
+        receita5.style.display = 'none';
+        receita6.style.display = 'none';
+        receita7.style.display = 'none';
+        receita8.style.display = 'none';
+        receita9.style.display = 'none';
+        receita10.style.display = 'none';
+        receita11.style.display = 'none';
+        receita12.style.display = 'none';
+        receita13.style.display = 'none';
+        receita14.style.display = 'none';
+        receita15.style.display = 'none';
+        receita16.style.display = 'none';
+        receita17.style.display = 'none';
+        receita18.style.display = 'none';
+        receita19.style.display = 'none';
+        receita20.style.display = 'none';
+        window.scrollTo({
+            top: 3000,
+            behavior: "smooth"
+        })}
+    function r2() {
+        descricao.style.display = 'block';
+        receita2.style.display = 'block';
+        receita1.style.display = 'none';
+        receita3.style.display = 'none';
+        receita4.style.display = 'none';
+        receita5.style.display = 'none';
+        receita6.style.display = 'none';
+        receita7.style.display = 'none';
+        receita8.style.display = 'none';
+        receita9.style.display = 'none';
+        receita10.style.display = 'none';
+        receita11.style.display = 'none';
+        receita12.style.display = 'none';
+        receita13.style.display = 'none';
+        receita14.style.display = 'none';
+        receita15.style.display = 'none';
+        receita16.style.display = 'none';
+        receita17.style.display = 'none';
+        receita18.style.display = 'none';
+        receita19.style.display = 'none';
+        receita20.style.display = 'none';
+        window.scrollTo({
+            top: 3000,
+            behavior: "smooth"
+        })}
+    function r3() {
+        descricao.style.display = 'block';
+        receita3.style.display = 'block';
+        receita1.style.display = 'none';
+        receita2.style.display = 'none';
+        receita4.style.display = 'none';
+        receita5.style.display = 'none';
+        receita6.style.display = 'none';
+        receita7.style.display = 'none';
+        receita8.style.display = 'none';
+        receita9.style.display = 'none';
+        receita10.style.display = 'none';
+        receita11.style.display = 'none';
+        receita12.style.display = 'none';
+        receita13.style.display = 'none';
+        receita14.style.display = 'none';
+        receita15.style.display = 'none';
+        receita16.style.display = 'none';
+        receita17.style.display = 'none';
+        receita18.style.display = 'none';
+        receita19.style.display = 'none';
+        receita20.style.display = 'none';
+        window.scrollTo({
+            top: 3000,
+            behavior: "smooth"
+        })}
+    function r4() {
+        descricao.style.display = 'block';
+        receita4.style.display = 'block';
+        receita1.style.display = 'none';
+        receita3.style.display = 'none';
+        receita2.style.display = 'none';
+        receita5.style.display = 'none';
+        receita6.style.display = 'none';
+        receita7.style.display = 'none';
+        receita8.style.display = 'none';
+        receita9.style.display = 'none';
+        receita10.style.display = 'none';
+        receita11.style.display = 'none';
+        receita12.style.display = 'none';
+        receita13.style.display = 'none';
+        receita14.style.display = 'none';
+        receita15.style.display = 'none';
+        receita16.style.display = 'none';
+        receita17.style.display = 'none';
+        receita18.style.display = 'none';
+        receita19.style.display = 'none';
+        receita20.style.display = 'none';
+        window.scrollTo({
+            top: 3000,
+            behavior: "smooth"
+        })}
+    function r5() {
+        descricao.style.display = 'block';
+        receita5.style.display = 'block';
+        receita1.style.display = 'none';
+        receita3.style.display = 'none';
+        receita2.style.display = 'none';
+        receita4.style.display = 'none';
+        receita6.style.display = 'none';
+        receita7.style.display = 'none';
+        receita8.style.display = 'none';
+        receita9.style.display = 'none';
+        receita10.style.display = 'none';
+        receita11.style.display = 'none';
+        receita12.style.display = 'none';
+        receita13.style.display = 'none';
+        receita14.style.display = 'none';
+        receita15.style.display = 'none';
+        receita16.style.display = 'none';
+        receita17.style.display = 'none';
+        receita18.style.display = 'none';
+        receita19.style.display = 'none';
+        receita20.style.display = 'none';
+        window.scrollTo({
+            top: 3000,
+            behavior: "smooth"
+        })}
+    function r6() {
+        descricao.style.display = 'block';
+        receita6.style.display = 'block';
+        receita1.style.display = 'none';
+        receita3.style.display = 'none';
+        receita2.style.display = 'none';
+        receita4.style.display = 'none';
+        receita5.style.display = 'none';
+        receita7.style.display = 'none';
+        receita8.style.display = 'none';
+        receita9.style.display = 'none';
+        receita10.style.display = 'none';
+        receita11.style.display = 'none';
+        receita12.style.display = 'none';
+        receita13.style.display = 'none';
+        receita14.style.display = 'none';
+        receita15.style.display = 'none';
+        receita16.style.display = 'none';
+        receita17.style.display = 'none';
+        receita18.style.display = 'none';
+        receita19.style.display = 'none';
+        receita20.style.display = 'none';
+        window.scrollTo({
+            top: 3000,
+            behavior: "smooth"
+        })}
+    function r7() {
+        descricao.style.display = 'block';
+        receita7.style.display = 'block';
+        receita1.style.display = 'none';
+        receita3.style.display = 'none';
+        receita2.style.display = 'none';
+        receita4.style.display = 'none';
+        receita5.style.display = 'none';
+        receita6.style.display = 'none';
+        receita8.style.display = 'none';
+        receita9.style.display = 'none';
+        receita10.style.display = 'none';
+        receita11.style.display = 'none';
+        receita12.style.display = 'none';
+        receita13.style.display = 'none';
+        receita14.style.display = 'none';
+        receita15.style.display = 'none';
+        receita16.style.display = 'none';
+        receita17.style.display = 'none';
+        receita18.style.display = 'none';
+        receita19.style.display = 'none';
+        receita20.style.display = 'none';
+        window.scrollTo({
+            top: 3000,
+            behavior: "smooth"
+        })}
+    function r8() {
+        descricao.style.display = 'block';
+        receita8.style.display = 'block';
+        receita1.style.display = 'none';
+        receita3.style.display = 'none';
+        receita2.style.display = 'none';
+        receita4.style.display = 'none';
+        receita5.style.display = 'none';
+        receita6.style.display = 'none';
+        receita7.style.display = 'none';
+        receita9.style.display = 'none';
+        receita10.style.display = 'none';
+        receita11.style.display = 'none';
+        receita12.style.display = 'none';
+        receita13.style.display = 'none';
+        receita14.style.display = 'none';
+        receita15.style.display = 'none';
+        receita16.style.display = 'none';
+        receita17.style.display = 'none';
+        receita18.style.display = 'none';
+        receita19.style.display = 'none';
+        receita20.style.display = 'none';
+        window.scrollTo({
+            top: 3000,
+            behavior: "smooth"
+        })}
+    function r9() {
+        descricao.style.display = 'block';
+        receita9.style.display = 'block';
+        receita1.style.display = 'none';
+        receita3.style.display = 'none';
+        receita2.style.display = 'none';
+        receita4.style.display = 'none';
+        receita5.style.display = 'none';
+        receita6.style.display = 'none';
+        receita7.style.display = 'none';
+        receita8.style.display = 'none';
+        receita10.style.display = 'none';
+        receita11.style.display = 'none';
+        receita12.style.display = 'none';
+        receita13.style.display = 'none';
+        receita14.style.display = 'none';
+        receita15.style.display = 'none';
+        receita16.style.display = 'none';
+        receita17.style.display = 'none';
+        receita18.style.display = 'none';
+        receita19.style.display = 'none';
+        receita20.style.display = 'none';
+        window.scrollTo({
+            top: 3000,
+            behavior: "smooth"
+        })}
+    function r10() {
+        descricao.style.display = 'block';
+        receita10.style.display = 'block';
+        receita1.style.display = 'none';
+        receita3.style.display = 'none';
+        receita2.style.display = 'none';
+        receita4.style.display = 'none';
+        receita5.style.display = 'none';
+        receita6.style.display = 'none';
+        receita7.style.display = 'none';
+        receita8.style.display = 'none';
+        receita9.style.display = 'none';
+        receita11.style.display = 'none';
+        receita12.style.display = 'none';
+        receita13.style.display = 'none';
+        receita14.style.display = 'none';
+        receita15.style.display = 'none';
+        receita16.style.display = 'none';
+        receita17.style.display = 'none';
+        receita18.style.display = 'none';
+        receita19.style.display = 'none';
+        receita20.style.display = 'none';
+        window.scrollTo({
+            top: 3000,
+            behavior: "smooth"
+        })}
+        function r11() {
+        descricao.style.display = 'block';
+        receita11.style.display = 'block';
+        receita1.style.display = 'none';
+        receita3.style.display = 'none';
+        receita2.style.display = 'none';
+        receita4.style.display = 'none';
+        receita5.style.display = 'none';
+        receita6.style.display = 'none';
+        receita7.style.display = 'none';
+        receita8.style.display = 'none';
+        receita9.style.display = 'none';
+        receita10.style.display = 'none';
+        receita12.style.display = 'none';
+        receita13.style.display = 'none';
+        receita14.style.display = 'none';
+        receita15.style.display = 'none';
+        receita16.style.display = 'none';
+        receita17.style.display = 'none';
+        receita18.style.display = 'none';
+        receita19.style.display = 'none';
+        receita20.style.display = 'none';
+        window.scrollTo({
+            top: 3000,
+            behavior: "smooth"
+        })}
+        function r12() {
+        descricao.style.display = 'block';
+        receita12.style.display = 'block';
+        receita1.style.display = 'none';
+        receita3.style.display = 'none';
+        receita2.style.display = 'none';
+        receita4.style.display = 'none';
+        receita5.style.display = 'none';
+        receita6.style.display = 'none';
+        receita7.style.display = 'none';
+        receita8.style.display = 'none';
+        receita9.style.display = 'none';
+        receita10.style.display = 'none';
+        receita11.style.display = 'none';
+        receita13.style.display = 'none';
+        receita14.style.display = 'none';
+        receita15.style.display = 'none';
+        receita16.style.display = 'none';
+        receita17.style.display = 'none';
+        receita18.style.display = 'none';
+        receita19.style.display = 'none';
+        receita20.style.display = 'none';
+        window.scrollTo({
+            top: 3000,
+            behavior: "smooth"
+        })}
+        function r13() {
+        descricao.style.display = 'block';
+        receita13.style.display = 'block';
+        receita1.style.display = 'none';
+        receita3.style.display = 'none';
+        receita2.style.display = 'none';
+        receita4.style.display = 'none';
+        receita5.style.display = 'none';
+        receita6.style.display = 'none';
+        receita7.style.display = 'none';
+        receita8.style.display = 'none';
+        receita9.style.display = 'none';
+        receita10.style.display = 'none';
+        receita11.style.display = 'none';
+        receita12.style.display = 'none';
+        receita14.style.display = 'none';
+        receita15.style.display = 'none';
+        receita16.style.display = 'none';
+        receita17.style.display = 'none';
+        receita18.style.display = 'none';
+        receita19.style.display = 'none';
+        receita20.style.display = 'none';
+        window.scrollTo({
+            top: 3000,
+            behavior: "smooth"
+        })}
+        function r14() {
+        descricao.style.display = 'block';
+        receita14.style.display = 'block';
+        receita1.style.display = 'none';
+        receita3.style.display = 'none';
+        receita2.style.display = 'none';
+        receita4.style.display = 'none';
+        receita5.style.display = 'none';
+        receita6.style.display = 'none';
+        receita7.style.display = 'none';
+        receita8.style.display = 'none';
+        receita9.style.display = 'none';
+        receita10.style.display = 'none';
+        receita11.style.display = 'none';
+        receita12.style.display = 'none';
+        receita13.style.display = 'none';
+        receita15.style.display = 'none';
+        receita16.style.display = 'none';
+        receita17.style.display = 'none';
+        receita18.style.display = 'none';
+        receita19.style.display = 'none';
+        receita20.style.display = 'none';
+        window.scrollTo({
+            top: 3000,
+            behavior: "smooth"
+        })}
+        function r15() {
+        descricao.style.display = 'block';
+        receita15.style.display = 'block';
+        receita1.style.display = 'none';
+        receita3.style.display = 'none';
+        receita2.style.display = 'none';
+        receita4.style.display = 'none';
+        receita5.style.display = 'none';
+        receita6.style.display = 'none';
+        receita7.style.display = 'none';
+        receita8.style.display = 'none';
+        receita9.style.display = 'none';
+        receita10.style.display = 'none';
+        receita11.style.display = 'none';
+        receita12.style.display = 'none';
+        receita13.style.display = 'none';
+        receita14.style.display = 'none';
+        receita16.style.display = 'none';
+        receita17.style.display = 'none';
+        receita18.style.display = 'none';
+        receita19.style.display = 'none';
+        receita20.style.display = 'none';
+        window.scrollTo({
+            top: 3000,
+            behavior: "smooth"
+        })}
+        function r16() {
+        descricao.style.display = 'block';
+        receita16.style.display = 'block';
+        receita1.style.display = 'none';
+        receita3.style.display = 'none';
+        receita2.style.display = 'none';
+        receita4.style.display = 'none';
+        receita5.style.display = 'none';
+        receita6.style.display = 'none';
+        receita7.style.display = 'none';
+        receita8.style.display = 'none';
+        receita9.style.display = 'none';
+        receita10.style.display = 'none';
+        receita11.style.display = 'none';
+        receita12.style.display = 'none';
+        receita13.style.display = 'none';
+        receita14.style.display = 'none';
+        receita15.style.display = 'none';
+        receita17.style.display = 'none';
+        receita18.style.display = 'none';
+        receita19.style.display = 'none';
+        receita20.style.display = 'none';
+        window.scrollTo({
+            top: 3000,
+            behavior: "smooth"
+        })}
+        function r17() {
+        descricao.style.display = 'block';
+        receita17.style.display = 'block';
+        receita1.style.display = 'none';
+        receita3.style.display = 'none';
+        receita2.style.display = 'none';
+        receita4.style.display = 'none';
+        receita5.style.display = 'none';
+        receita6.style.display = 'none';
+        receita7.style.display = 'none';
+        receita8.style.display = 'none';
+        receita9.style.display = 'none';
+        receita10.style.display = 'none';
+        receita11.style.display = 'none';
+        receita12.style.display = 'none';
+        receita13.style.display = 'none';
+        receita14.style.display = 'none';
+        receita15.style.display = 'none';
+        receita16.style.display = 'none';
+        receita18.style.display = 'none';
+        receita19.style.display = 'none';
+        receita20.style.display = 'none';
+        window.scrollTo({
+            top: 3000,
+            behavior: "smooth"
+        })}
+        function r18() {
+        descricao.style.display = 'block';
+        receita18.style.display = 'block';
+        receita1.style.display = 'none';
+        receita3.style.display = 'none';
+        receita2.style.display = 'none';
+        receita4.style.display = 'none';
+        receita5.style.display = 'none';
+        receita6.style.display = 'none';
+        receita7.style.display = 'none';
+        receita8.style.display = 'none';
+        receita9.style.display = 'none';
+        receita10.style.display = 'none';
+        receita11.style.display = 'none';
+        receita12.style.display = 'none';
+        receita13.style.display = 'none';
+        receita14.style.display = 'none';
+        receita15.style.display = 'none';
+        receita16.style.display = 'none';
+        receita17.style.display = 'none';
+        receita19.style.display = 'none';
+        receita20.style.display = 'none';
+        window.scrollTo({
+            top: 3000,
+            behavior: "smooth"
+        })}
+        function r19() {
+        descricao.style.display = 'block';
+        receita19.style.display = 'block';
+        receita1.style.display = 'none';
+        receita3.style.display = 'none';
+        receita2.style.display = 'none';
+        receita4.style.display = 'none';
+        receita5.style.display = 'none';
+        receita6.style.display = 'none';
+        receita7.style.display = 'none';
+        receita8.style.display = 'none';
+        receita9.style.display = 'none';
+        receita10.style.display = 'none';
+        receita11.style.display = 'none';
+        receita12.style.display = 'none';
+        receita13.style.display = 'none';
+        receita14.style.display = 'none';
+        receita15.style.display = 'none';
+        receita16.style.display = 'none';
+        receita17.style.display = 'none';
+        receita18.style.display = 'none';
+        receita20.style.display = 'none';
+        window.scrollTo({
+            top: 3000,
+            behavior: "smooth"
+        })}
+        function r20() {
+        descricao.style.display = 'block';
+        receita20.style.display = 'block';
+        receita1.style.display = 'none';
+        receita3.style.display = 'none';
+        receita2.style.display = 'none';
+        receita4.style.display = 'none';
+        receita5.style.display = 'none';
+        receita6.style.display = 'none';
+        receita7.style.display = 'none';
+        receita8.style.display = 'none';
+        receita9.style.display = 'none';
+        receita10.style.display = 'none';
+        receita11.style.display = 'none';
+        receita12.style.display = 'none';
+        receita13.style.display = 'none';
+        receita14.style.display = 'none';
+        receita15.style.display = 'none';
+        receita16.style.display = 'none';
+        receita17.style.display = 'none';
+        receita18.style.display = 'none';
+        receita19.style.display = 'none';
+        window.scrollTo({
+            top: 3000,
+            behavior: "smooth"
+        })}
+</script>

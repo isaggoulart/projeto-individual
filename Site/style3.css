@@ -1,6 +1,6 @@
 body {
     background-image: url(imagens/fundo2.png);
-    background-size: cover;
+    background-size: contain;
     padding: 0;
     margin: 0;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -59,4 +59,103 @@ body {
     width: 160px;
     height: 100px;
     margin-top: 20px;
+}
+
+.home {
+    width: 98vw;
+    height: 90vh;
+}
+
+.receitas {
+    width: 98vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.receitas .titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 98vw;    
+}
+
+.receitas .titulo span {
+    font-size: 50px;
+    font-family: "Chewy", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 2px;
+    color: #1F2832;
+}
+
+.receitas button {
+    color: #459B69;
+    text-decoration: underline;
+    font-size: 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    line-height: 35px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.receitas .opcoes {
+    width: 80vw;
+    height: 70vh;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+.receitas .opcoes .doces {
+    width: 25vw;
+    height: 67vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: solid 3px #FAC420;
+    border-radius: 20px;
+}
+
+.receitas .opcoes .salgados {
+    width: 25vw;
+    height: 67vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: solid 3px #FAC420;
+    border-radius: 20px;
+}
+
+
+.receitas .opcoes .salgados, .doces {
+    font-size: 20px;
+    font-family: "Chewy", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 2px;
+    color: #1F2832;
+    padding-left: 30px;
+}
+
+.receitas .opcoes .salgados h2, .doces h2{
+    padding-left: 130px;
+}
+
+.descricao .receita {
+    width: 80vw;
+    height: 90vh;
+}
+
+.descricao {
+    width: 80vw;
+    height: 90vh;
+    margin-left: 140px;
+    margin-bottom: 40px;
+    background-color: #459B69;
+    border-radius: 20px;
 }
