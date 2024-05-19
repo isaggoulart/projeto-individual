@@ -29,10 +29,6 @@
                 </li>
                 <li>|</li>
                 <li>
-                    <a href="">Comunidade</a>
-                </li>
-                <li>|</li>
-                <li>
                     <a href="">Sair</a>
                 </li>
                 <button><a href="cadastro.html">CADASTRAR</a></button>
@@ -41,8 +37,26 @@
         </div>
     </div>
     <div class="home">
+        <div class="metricas">
+            <div class="card">
+                <h2>TIPO DE COMIDA FAVORITO DA COMUNIDADE</h2>
+                <p>Italiana</p>
+            </div>
+            <div class="card">
+                <h2>PONTUAÇÃO MÉDIA ATINGIDA NO QUIZ</h2>
+                <p>10/15</p>
+            </div>
+            <div class="outros">
+                <button>JOGAR QUIZ</button>
+                <button>VER RECEITAS</button>
+            </div>
+        </div>
+        <div class="forum">
+            <h2>ACOMPANHE AS DISCUSSÕES</h2>
+            <div class="acompanhar">
 
-
+            </div>
+        </div>
 
     </div>
     <div class="receitas">
@@ -70,7 +84,7 @@
                 <button onclick="r13()">Salada de macarrão</button>
                 <button onclick="r14()">Arroz carreteiro</button>
                 <button onclick="r15()">Carne moída à cavalo</button>
-                <button onclick="r16()">Pão de batata</button>
+                <button onclick="r16()">Pão caseiro</button>
                 <button onclick="r17()">Risoto de abóbora com carne moída</button>
                 <button onclick="r18()">Macarrão atolado com frango</button>
                 <button onclick="r19()">Lasanha de frango</button>
@@ -79,7 +93,8 @@
         </div>
     </div>
     <div class="descricao" id="descricao">
-        <div class=receita id="receita1"></div>
+        <div class=receita id="receita1">
+        </div>
         <div class=receita id="receita2"></div>
         <div class=receita id="receita3"></div>
         <div class=receita id="receita4"></div>
@@ -90,7 +105,30 @@
         <div class=receita id="receita9"></div>
         <div class=receita id="receita10"></div>
         <div class=receita id="receita11"></div>
-        <div class=receita id="receita12"></div>
+        <div class=receita id="receita12">
+            <div class="ingredientes">
+                <span>5 batatas médias <br>
+                    1 cenoura <br>
+                    2 tomates sem semente <br> 
+                    1 cebola <br>
+                    1 lata de milho <br>
+                    5 ovos cozidos <br>
+                    1 ovo <br>
+                    Azeite de oliva <br>
+                    Salsinha e cebolinha <br> 
+                    Sal a gosto <br>
+                    1 limão espremido <br> 
+                    </span>
+                    <img src="imagens/maionese.png">
+            </div>
+            <div class="preparo">
+                <span>Cozinhar as batatas, a cenoura e os ovos. Picar em cubinhos após cozidos. <br>
+                    Quando esfriar, acrescentar o tomate, a cebola e o milho. <br>
+                    Para o molho: bater o ovo com o azeite e ir adicionando mais azeite aos poucos, mas continuamente, até chegar em uma consistência cremosa. <br>
+                    Misturar o molho com os outros ingredientes e finalizar com o limão, o sal e a salsinha. <br> Preferível comer bem gelado. 
+                    </span>
+            </div>
+        </div>
         <div class=receita id="receita13"></div>
         <div class=receita id="receita14"></div>
         <div class=receita id="receita15"></div>
@@ -415,7 +453,7 @@
         })}
         function r12() {
         descricao.style.display = 'block';
-        receita12.style.display = 'block';
+        receita12.style.display = 'flex';
         receita1.style.display = 'none';
         receita3.style.display = 'none';
         receita2.style.display = 'none';
