@@ -29,3 +29,5 @@ foreign key (fkUsuario) references usuario (idUsuario),
 titulo varchar(45),
 descricao varchar(250)
 );
+
+select * from usuario;
