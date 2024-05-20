@@ -1,5 +1,5 @@
 body {
-    background-image: url(imagens/fundo2.png);
+    background-image: url(../assets/imgs/fundo2.png);
     background-size: contain;
     padding: 0;
     margin: 0;
@@ -69,7 +69,7 @@ body {
     justify-content: center;
     align-items: center;
     color: #1F2832;
-    background-image: url(imagens/banner.png);
+    background-image: url(../assets/imgs/banner.png);
     background-size: cover;
     z-index: -1;
 }
@@ -174,7 +174,7 @@ body {
 .contexto .infos2 .curiosidade {
     width: 40vw;
     height: 45vh;
-    background-image: url(imagens/curiosidade.jpg);
+    background-image: url(../assets/imgs/curiosidade.jpg);
     background-size: cover;
     border-radius: 20px;
     font-size: 19px;

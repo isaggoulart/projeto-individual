@@ -6,13 +6,13 @@ body {
 }
 
 .loading-div {
-  width: 50px;
+  width: 100%;
   display: none;
 }
 
 .loading-div img {
-  height: 20px;
-  width: 20px;
+  height: 50px;
+  width: 50px;
 }
 
 #div_erros_login {
@@ -179,17 +179,18 @@ input {
 
 .card_erro {
   display: none;
-  color: black;
-  width: 30vw;
-  border-radius: 4px;
-  border: #e6005a 3px solid;
+  color: #fff;
+  width: 43vw;
   padding: 10px;
   margin-top: 22px;
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .card_erro #mensagem_erro{
   font-weight: 500;
   font-size: 20px;
+  letter-spacing: 1px;
 }
 
 
@@ -208,7 +209,7 @@ input {
   display: flex;
   flex-direction: column;
   width: 35vw;
-  height: 55vh;
+  height: 70vh;
   background-color: #459B69;
   border-radius: 20px;
 }
@@ -228,5 +229,25 @@ input {
   justify-content: center;
   align-items: center;
   align-self: center;
-  width: 100%;
+  width: 30%;
+  height: 6vh;
+  border-radius: 20px;
+  font-size: 22px;
+  border: none;
+  color: #1F2832;
+  background-color: #FAC420;
+  font-family: "Chewy", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.card_erro2 {
+  display: none;
+  color: #fff;
+  width: 34vw;
+  padding: 10px;
+  margin-top: 22px;
+  font-size: 20px;
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
