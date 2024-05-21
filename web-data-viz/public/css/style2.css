@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+  }
+
 body {
     background-image: url(../assets/imgs/fundo2.png);
     background-size: contain;
@@ -343,9 +347,11 @@ div.swiper-button-next {
 }
 
 .receitas .mensagem .imagemLivro {
-    width: 40vw;
-    height: 50vh;
-    background-color: #459B69;
+    width: 17vw;
+    height: 48vh;
+    background-image: url(../assets/imgs/livroRecetas.jpeg);
+    background-size: contain;
+    border-radius: 20px;
 }
 
 .receitas .mensagem .mensagenzinha {
@@ -387,18 +393,19 @@ div.swiper-button-next {
     height: 50vh;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 .sobreMim .conjuntoSobreMim .foto {
-    width: 40vw;
-    height: 53vh;
-    background-color: #459B69;
+    width: 30vw;
+    height: 58vh;
+    background-image: url('../assets/imgs/imgSobreMim.jpeg');
     border-radius: 20px;
+    background-size: cover;
 }
 
 .sobreMim .conjuntoSobreMim .mensagem {
-    width: 40vw;
+    width: 44vw;
     font-size: 21px;
     line-height: 30px;
     text-align: justify;
