@@ -30,4 +30,10 @@ titulo varchar(45),
 descricao varchar(250)
 );
 
+
 select * from usuario;
+
+select tipoComida
+from usuario group by tipoComida
+order by count(*) desc 
+limit 1;
