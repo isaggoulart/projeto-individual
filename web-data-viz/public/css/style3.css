@@ -1,5 +1,5 @@
 body {
-    background-image: url(imagens/fundo2.png);
+    background-image: url(../assets/imgs/fundo2.png);
     background-size: contain;
     padding: 0;
     margin: 0;
@@ -217,40 +217,24 @@ body {
     padding-left: 130px;
 }
 
-.descricao .receita {
-    width: 70vw;
-    height: 85vh;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    color: #fff;
-    flex-direction: column;
-    letter-spacing: 1px;
-}
-
 .descricao {
-    width: 70vw;
-    height: 85vh;
+    width: 50vw;
+    height: auto;
     margin-left: 220px;
     margin-bottom: 40px;
     background-color: #459B69;
     border-radius: 20px;
-}
-
-.descricao .receita .ingredientes, .preparo {
-    width: 60vw;
-    line-height: 25px;
-    font-size: 18px;
-}
-
-.descricao .receita .ingredientes img {
-    width: 400px;
-    border-radius: 20px;
-    padding-right: 40px;
-}
-
-.descricao .receita .ingredientes {
+    color: #1F2832;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    margin-left: 400px;
+}
+
+.descricao2 {
+    width: 40vw;
+    height: auto;
+    font-size: 19px;
+    text-align: justify;
+    padding: 50px;
 }
