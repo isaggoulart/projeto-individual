@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ptbr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="../css/style4.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <img src="../assets/imgs/Logo.png">
+            <ul class="navbar">
+                <li>
+                    <a href="">Home</a>
+                </li>
+                <li>|</li>
+                <li>
+                    <a href="">Receitas</a>
+                </li>
+                <li>|</li>
+                <li>
+                    <a href="">Quiz</a>
+                </li>
+                <li>|</li>
+                <li>
+                    <a href="">Sair</a>
+                </li>
+                <button><a href="cadastro.html">CADASTRAR</a></button>
+                <button><a href="login.html">LOGIN</a></button>
+            </ul>
+        </div>
+    </div>
+    <div class="tudo">
+        <div class="card">
+            <div id="inicio" class="inicio">
+                <div class="instrucoes">
+                    <h2>QUIZ - CONHECIMENTOS CULINÁRIOS</h2>
+                    <p>Este é um quiz para que você, perdido na cozinha, tenha um parâmetro do nível em que você se
+                        encontra. Quem sabe, de tanto ouvir em casa e na TV, você pode descobrir que já sabe mais (ou
+                        menos) do que imagina que sabe...</p>
+                    <p>O jogo é simples: clique em "iniciar" e escolha a alternativa correta para cada pergunta. No
+                        final, você terá acesso à sua pontuação e à sua posição no ranking. Bom divertimento!</p>
+                </div>
+                <div class="iniciar">
+                    <button onclick="iniciar()">INICIAR JOGO</button>
+                </div>
+            </div>
+            <div id="questao1" class="questao">
+                    <span>Qual folha normalmente é utilizada para temperar feijão?</span>
+                    <img src="../assets/imgs/temperos.jpg">
+                <div class="respostas">
+                    <input name="q1" type="radio" id="q1_alt1"> Louro
+                    <input name="q1" type="radio" id="q1_alt2"> Manjericão
+                    <input name="q1" type="radio" id="q1_alt3"> Sálvia
+                    <input name="q1" type="radio" id="q1_alt4"> Alecrim
+                </div>
+                <button onclick="q1()">PRÓXIMA QUESTÃO</button>
+            </div>
+
+            <div id="questao2" class="questao">
+                <span>Por quanto tempo um ovo precisa ser fervido para ficar bem cozido?</span>
+                <img src="../assets/imgs/ovos.jpg">
+                <div class="respostas">
+                    <input name="q2" type="radio" id="q2_alt1"> 12 minutos
+                    <input name="q2" type="radio" id="q2_alt2"> 5 minutos
+                    <input name="q2" type="radio" id="q2_alt3"> 3 minutos
+                    <input name="q2" type="radio" id="q2_alt4"> 8 minutos
+                </div>
+                <button onclick="q2()">PRÓXIMA QUESTÃO</button>
+            </div>
+
+            <div id="questao3" class="questao">
+                <span>Qual técnica pode ser usada para deixar o bolo mais fofo?</span>
+                <div class="respostas">
+                    <input name="q3" type="radio" id="q3_alt1"> Não bater a massa sem uma batedeira <br><br>
+                    <input name="q3" type="radio" id="q3_alt2"> Acrescentar mais fermento <br><br>
+                    <input name="q3" type="radio" id="q3_alt3"> Fazer claras em neve com as claras dos ovos utilizados <br><br>
+                    <input name="q3" type="radio" id="q3_alt4"> Não bater a massa por muito tempo <br> <br>
+                </div>
+                <button onclick="q3()">PRÓXIMA QUESTÃO</button>
+            </div>
+
+            <div id="questao4" class="questao">
+                <span>Qual tipo de carne não pode em hipótese alguma ser consumida mal passada?</span>
+                <img src="../assets/imgs/carnes.jpg">
+                <div class="respostas">
+                    <input name="q4" type="radio" id="q4_alt1"> Peixe
+                    <input name="q4" type="radio" id="q4_alt2"> Bovina
+                    <input name="q4" type="radio" id="q4_alt3"> Ovina
+                    <input name="q4" type="radio" id="q4_alt4"> Suina
+                </div>
+                <button onclick="q4()">PRÓXIMA QUESTÃO</button>
+            </div>
+
+            <div id="questao5" class="questao">
+                <span>Quando dizemos que uma massa está al dente, ela está:</span>
+                <img src="../assets/imgs/macarrao.png">
+                <div class="respostas">
+                    <input name="q5" type="radio" id="q5_alt1"> Cozida demais <br>
+                    <input name="q5" type="radio" id="q5_alt2"> Nem muito cozida nem muito crua <br>
+                    <input name="q5" type="radio" id="q5_alt3"> Quase crua <br>
+                    <input name="q5" type="radio" id="q5_alt4"> Totalmente crua 
+                </div>
+                <button onclick="q5()">PRÓXIMA QUESTÃO</button>
+            </div>
+
+            <div id="questao6" class="questao">
+                <span>Um banho-maria acontece quando:</span>
+                <div class="respostas">
+                    <input name="q6" type="radio" id="q6_alt1"> Fritamos o alimento em óleo quente <br><br>
+                    <input name="q6" type="radio" id="q6_alt2"> Fervemos o alimento em água quente <br><br>
+                    <input name="q6" type="radio" id="q6_alt3"> Refogamos o alimento com um pouco de gordura na panela <br><br>
+                    <input name="q6" type="radio" id="q6_alt4"> Preparamos o alimento sob calor indireto (um recipiente em cima da panela com água fervendo, por exemplo) 
+                </div>
+                <button onclick="q6()">PRÓXIMA QUESTÃO</button>
+            </div>
+
+            <div id="questao7" class="questao">
+                <span>Um bom corte para carne de panela:</span>
+                <img src="../assets/imgs/carnePanela.png">
+                <div class="respostas">
+                    <input name="q7" type="radio" id="q7_alt1"> Acém
+                    <input name="q7" type="radio" id="q7_alt2"> Filé Mignon  
+                    <input name="q7" type="radio" id="q7_alt3"> Picanha  
+                    <input name="q7" type="radio" id="q7_alt4"> Fígado 
+                </div>
+                <button onclick="q7()">PRÓXIMA QUESTÃO</button>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    document.querySelectorAll('.questao').forEach(div => {
+        div.style.display = 'none';
+    });
+    var pontuacao = 0;
+
+
+    function iniciar() {
+        questao1.style.display = 'flex';
+        inicio.style.display = 'none';
+    }
+
+    function q1() {
+        document.querySelectorAll('.questao').forEach(div => {
+            div.style.display = 'none';
+        });
+        questao2.style.display = 'flex';
+        if (document.getElementById('q1_alt1').checked) pontuacao++;
+    }
+
+    function q2() {
+        document.querySelectorAll('.questao').forEach(div => {
+            div.style.display = 'none';
+        });
+        questao3.style.display = 'flex';
+        if (document.getElementById('q2_alt1').checked) pontuacao++;
+    }
+
+    function q3() {
+        document.querySelectorAll('.questao').forEach(div => {
+            div.style.display = 'none';
+        });
+        questao4.style.display = 'flex';
+        if (document.getElementById('q3_alt3').checked) pontuacao++;
+    }
+
+    function q4() {
+        document.querySelectorAll('.questao').forEach(div => {
+            div.style.display = 'none';
+        });
+        questao5.style.display = 'flex';
+        if (document.getElementById('q4_alt4').checked) pontuacao++;
+    }
+
+    function q5() {
+        document.querySelectorAll('.questao').forEach(div => {
+            div.style.display = 'none';
+        });
+        questao6.style.display = 'flex';
+        if (document.getElementById('q5_alt2').checked) pontuacao++;
+    }
+
+    function q6() {
+        document.querySelectorAll('.questao').forEach(div => {
+            div.style.display = 'none';
+        });
+        questao7.style.display = 'flex';
+        if (document.getElementById('q6_alt4').checked) pontuacao++;
+    }
+  
+    function q7() {
+        document.querySelectorAll('.questao').forEach(div => {
+            div.style.display = 'none';
+        });
+        // questao8.style.display = 'flex';
+        if (document.getElementById('q7_alt1').checked) pontuacao++;
+    }
+</script>
