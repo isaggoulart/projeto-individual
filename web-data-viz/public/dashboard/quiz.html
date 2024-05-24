@@ -17,11 +17,11 @@
             <img src="../assets/imgs/Logo.png">
             <ul class="navbar">
                 <li>
-                    <a href="">Home</a>
+                    <a href="#home">Home</a>
                 </li>
                 <li>|</li>
                 <li>
-                    <a href="">Receitas</a>
+                    <a href="#receitas">Receitas</a>
                 </li>
                 <li>|</li>
                 <li>
@@ -29,7 +29,7 @@
                 </li>
                 <li>|</li>
                 <li>
-                    <a href="">Sair</a>
+                    <a href="../index.html">Sair</a>
                 </li>
                 <button><a href="cadastro.html">CADASTRAR</a></button>
                 <button><a href="login.html">LOGIN</a></button>
@@ -133,16 +133,76 @@
                 <button onclick="q7()">PRÓXIMA QUESTÃO</button>
             </div>
 
+            <div id="questao8" class="questao">
+                <span>Proporção de água para cozinhar arroz?</span>
+                <div class="respostas">
+                    <input name="q8" type="radio" id="q8_alt1"> Uma medida de arroz, uma de água <br><br>
+                    <input name="q8" type="radio" id="q8_alt2"> Uma medida de arroz, duas de água <br><br>
+                    <input name="q8" type="radio" id="q8_alt3"> Uma medida de arroz, três de água <br><br>
+                    <input name="q8" type="radio" id="q8_alt4"> Uma medida de arroz, meia de água 
+                </div>
+                <button onclick="q8()">PRÓXIMA QUESTÃO</button>
+            </div>
+
+            <div id="questao9" class="questao">
+                <span>Qual destes NÃO é um derivado da mandioca?</span>
+                <img src="../assets/imgs/mandioca.jpg">
+                <div class="respostas">
+                    <input name="q9" type="radio" id="q9_alt1"> Tapioca
+                    <input name="q9" type="radio" id="q9_alt2"> Sagu 
+                    <input name="q9" type="radio" id="q9_alt3"> Maizena   
+                    <input name="q9" type="radio" id="q9_alt4"> Polvilho doce 
+                </div>
+                <button onclick="q9()">PRÓXIMA QUESTÃO</button>
+            </div>
+
+            <div id="questao10" class="questao">
+                <span>Proporção de água para cozinhar arroz?</span>
+                <div class="respostas">
+                    <input name="q10" type="radio" id="q10_alt1"> A casca deve ser dura <br><br>
+                    <input name="q10" type="radio" id="q10_alt2"> Ele deve ser do verde mais escuro que você encontrar <br><br>
+                    <input name="q10" type="radio" id="q10_alt3"> A casca deve ser porosa <br><br>
+                    <input name="q10" type="radio" id="q10_alt4"> A casca deve ser fina e lisa  
+                </div>
+                <button onclick="q10()">PRÓXIMA QUESTÃO</button>
+            </div>
+
+            <div id="questao11" class="questao">
+                <span>Polenta é feita à base de:</span>
+                <img src="../assets/imgs/polenta.jpg">
+                <div class="respostas">
+                    <input name="q11" type="radio" id="q11_alt1"> Fubá
+                    <input name="q11" type="radio" id="q11_alt2"> Farinha de mandioca
+                    <input name="q11" type="radio" id="q11_alt3"> Polvilho
+                    <input name="q11" type="radio" id="q11_alt4"> Farinha de trigo
+                </div>
+                <button onclick="q11()">PRÓXIMA QUESTÃO</button>
+            </div>
+
+            <div id="questao12" class="questao">
+                <span>Qual erva é comumente utilizada para temperar molhos de tomate?</span>
+                <img src="../assets/imgs/temperos.jpg">
+                <div class="respostas">
+                    <input name="q12" type="radio" id="q12_alt1"> Salsinha
+                    <input name="q12" type="radio" id="q12_alt2"> Alecrim 
+                    <input name="q12" type="radio" id="q12_alt3"> Manjericão
+                    <input name="q12" type="radio" id="q12_alt4"> Sálvia
+                </div>
+                <button onclick="q12()">FINALIZAR QUIZ</button>
+            </div>
+
+            <div id="finalizar" class="finalizar">
+            </div>
         </div>
     </div>
 </body>
-
 </html>
 
 <script>
     document.querySelectorAll('.questao').forEach(div => {
         div.style.display = 'none';
     });
+    finalizar.style.display = 'none'
     var pontuacao = 0;
 
 
@@ -203,7 +263,53 @@
         document.querySelectorAll('.questao').forEach(div => {
             div.style.display = 'none';
         });
-        // questao8.style.display = 'flex';
+        questao8.style.display = 'flex';
         if (document.getElementById('q7_alt1').checked) pontuacao++;
+    }
+
+    function q8() {
+        document.querySelectorAll('.questao').forEach(div => {
+            div.style.display = 'none';
+        });
+        questao9.style.display = 'flex';
+        if (document.getElementById('q8_alt2').checked) pontuacao++;
+    }
+
+    function q9() {
+        document.querySelectorAll('.questao').forEach(div => {
+            div.style.display = 'none';
+        });
+        questao10.style.display = 'flex';
+        if (document.getElementById('q9_alt3').checked) pontuacao++;
+    }
+
+    function q10() {
+        document.querySelectorAll('.questao').forEach(div => {
+            div.style.display = 'none';
+        });
+        questao11.style.display = 'flex';
+        if (document.getElementById('q10_alt4').checked) pontuacao++;
+    }
+
+    function q11() {
+        document.querySelectorAll('.questao').forEach(div => {
+            div.style.display = 'none';
+        });
+        questao12.style.display = 'flex';
+        if (document.getElementById('q11_alt1').checked) pontuacao++;
+    }
+
+    function q12() {
+        document.querySelectorAll('.questao').forEach(div => {
+            div.style.display = 'none';
+        });
+        finalizar.style.display = 'flex';
+        if (document.getElementById('q12_alt3').checked) pontuacao++;
+
+            finalizar.innerHTML = `<img src="../assets/imgs/finalizar.png"> <br>    <span style="font-size: 30px;">Você acertou <span style="color: #FAC420;">${pontuacao}/12</span> perguntas!</span><br><br>`;
+        if (pontuacao < 6) finalizar.innerHTML += `Você com certeza passaria fome se sua alimentação dependesse apenas de você!  <br><br>`;
+        else if (pontuacao < 10) finalizar.innerHTML += `Está no caminho, já consegue fazer os básicos e se virar bem na cozinha. <br><br>`
+        else finalizar.innerHTML += `Já é praticamente um masterchef! Tem certeza de que não sabe cozinhar? <br> <br>`;
+            finalizar.innerHTML += `<button onclick="ranking()">VER RANKING</button>`;
     }
 </script>

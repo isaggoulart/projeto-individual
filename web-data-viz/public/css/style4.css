@@ -137,3 +137,32 @@ body {
     font-size: 21px;
 }
 
+.finalizar {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    font-size: 22px;
+    padding: 40px;
+}
+
+.finalizar button {
+    width: 18vw;
+    height: 8vh;
+    border-radius: 30px;
+    font-size: 25px;
+    border: none;
+    color: #1F2832;
+    background-color: #FAC420;
+    font-family: "Chewy", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 1px;
+    cursor: pointer;
+} 
+
+.finalizar img {
+    width: 100px;
+    height: 100px;
+}
+
