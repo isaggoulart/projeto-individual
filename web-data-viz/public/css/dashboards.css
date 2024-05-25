@@ -5,7 +5,14 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Barlow', 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-image: url(../assets/imgs/fundo2.png);
+  background-size: contain;
+}
+
+.janela img {
+  width: 370px;
+  height: 250px;
 }
 
 .label-captura {
@@ -15,8 +22,14 @@ body {
 
 .dash-right .avisos {
   width: 100%;
-  color: rgb(216, 216, 216);
-  font-family: 'Barlow', 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #1F2832;
+}
+
+.dash-right .avisos h1 {
+    font-family: "Chewy", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    padding-top: 30px;
 }
 
 .dash-right .avisos .container {
@@ -26,53 +39,65 @@ body {
 }
 
 .dash-right .avisos .container .div-form {
-  width: 95%;
+  width: 90%;
+  margin-left: 100px;
 }
 
 .dash-right .avisos .container .div-form #form_postagem {
+  width: 90%;
+}
+
+.dash-right .avisos .container .div-form #form_postagem  input{
   width: 95%;
+  height: 4vh;
 }
 
 .dash-right .avisos .div-form label {
-  width: 95%;
+  width: 90%;
 }
 
 .dash-right .avisos .div-form input {
   width: 95%;
-  border-radius: 5px;
+  border-radius: 20px;
+  border: 3px solid #FAC420;
 }
 
 .dash-right .avisos .div-form textarea {
   width: 95%;
-  border: 3px solid #e6005a;
+  border: 3px solid #FAC420;
   background-color: white;
-  border-radius: 5px;
+  border-radius: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding: 10px;
 }
 
 .dash-right .avisos .div-form button {
   cursor: pointer;
-  font-family: 'Barlow', 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   border: 0;
-  border-radius: 5px;
-  font-weight: 600;
+  border-radius: 20px;
   font-size: 18px;
   padding: 10px 15px;
-  color: white;
-  background-color: #e6005a;
+  color: #1F2832;
+  background-color: #FAC420;
   width: 120px;
+  font-family: "Chewy", system-ui;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .publicacao-btn-editar {
   cursor: pointer;
-  font-family: 'Barlow', 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   border: 0;
-  border-radius: 5px;
+  border-radius: 20px;
   font-weight: 600;
   font-size: 14px;
   padding: 5px 8px;
-  color: white;
-  background-color: #e6005a;
+  color: #1F2832;
+  background-color: #FAC420;
   width: 80px;
+  font-family: "Chewy", system-ui;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .publicacao {
@@ -82,8 +107,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: stretch;
-  border-bottom: 3px solid #e6005a;
   padding: 20px;
+  color: #fff;
 }
 
 .publicacao>*:not(:last-child) {
@@ -91,12 +116,12 @@ body {
 }
 
 .div-results {
-  width: 100%;
+  width: 80%;
 }
 
 .div-results .feed-container {
-  background-color: #212124;
-  border-radius: 5px;
+  background-color: #459B69;
+  border-radius: 20px;
   margin-bottom: 80px;
 }
 
@@ -348,15 +373,13 @@ canvas {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  border-right: 3px solid #32b9cd;
-  background-color: #212124;
+  background-color: #459B69;
 }
 
 .dash-right {
   display: flex;
-  width: 70%;
+  width: 75%;
   height: fit-content;
-  background-color: #161618;
   position: relative;
   top: 0;
   left: 25%;
@@ -375,7 +398,7 @@ canvas {
 }
 
 .hello h3 {
-  color: #e3b062;
+  color: #fff;
   font-weight: 300;
   font-size: 1.2rem;
 }
@@ -395,34 +418,39 @@ canvas {
 
 .btn-nav-white {
   width: 40%;
-  background-color: white;
-  border: 3px solid #e6005a;
-  border-radius: 5px;
+  background-color: #FAC420;
+  border-radius: 20px;
   text-align: center;
   padding: 2% 5%;
 }
 
 .btn-nav-white h3 {
-  color: #e6005a;
+  color: #1F2832;
   padding: 0;
   margin: 0;
+  font-family: "Chewy", system-ui;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .btn-nav h3,
 .btn-logout h3 {
   margin: 0;
   padding: 0;
+  font-family: "Chewy", system-ui;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .btn-logout {
   margin: 0;
   padding: 0;
-  width: 20%;
-  background-color: #32b9cd;
-  color: white;
-  border-radius: 10px;
+  width: 40%;
+  background-color: #FAC420;
+  color: #1F2832;
+  border-radius: 20px;
   text-align: center;
-  padding: 10px 15px;
+  padding: 2% 5%;
   margin-bottom: 100px;
   cursor: pointer;
 }
