@@ -3,7 +3,7 @@ create database de_barriga_cheia;
 use de_barriga_cheia;
 
 create table usuario (
-idUsuario int primary key auto_increment,
+id int primary key auto_increment,
 nome varchar(100),
 tipoComida varchar (30),
 dtNasc date, 
@@ -15,19 +15,18 @@ create table tentativa (
 idTentativa int auto_increment,
 fkUsuario int,
 primary key (idTentativa, fkUsuario),
-foreign key (fkUsuario) references usuario (idUsuario),
-inicio datetime,
-fim datetime,
+foreign key (fkUsuario) references usuario (id),
+inicio datetime default current_timestamp,
+fim datetime default current_timestamp,
 pontos int
 );
 
-create table mensagem (
-idMensagem int auto_increment,
-fkUsuario int,
-primary key (idMensagem, fkUsuario),
-foreign key (fkUsuario) references usuario (idUsuario),
-titulo varchar(45),
-descricao varchar(250)
+CREATE TABLE aviso (
+	id INT PRIMARY KEY AUTO_INCREMENT,
+	titulo VARCHAR(100),
+	descricao VARCHAR(150),
+	fk_usuario INT,
+	FOREIGN KEY (fk_usuario) REFERENCES usuario(id)
 );
 
 
