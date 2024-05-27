@@ -2,15 +2,12 @@
 <html lang="pt-br">
 
 <head>
-    <link rel="shortcut icon" href="../assets/icon/favicon2.ico" type="image/x-icon">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AquaTech | Tempo Real</title>
-
-
+    <title>Dashboard</title>
     <link rel="stylesheet" href="./../css/dashboards.css">
-    <link rel="stylesheet" href="./../css/estilo.css" />
+    <link rel="stylesheet" href="../css/style3.css">
 
     <script src="../js/sessao.js"></script>
     <script src="../js/alerta.js"></script>
@@ -19,28 +16,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
 </head>
 
-<body onload="validarSessao(), exibirAquarios(),  atualizacaoPeriodica()">
+<body onload="validarSessao(), atualizacaoPeriodica()">
 
     <div class="janela">
-
         <div class="header-left dash-header">
-
-            <h1>AquaTech</h1>
-
+            <img src="../assets/imgs/Logo.png" alt="">
             <div class="hello">
                 <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
             </div>
-
             <div class="btn-nav-white">
-                <a href="cards.html">
-                <h3>HOME</h3>
+                <a href="receitas.html">
+                <h3>RECEITAS</h3>
             </a>
             </div>
-
-            <div class="btn-nav-white">
-                <h3>RECEITAS</h3>
-            </div>
-
             <div class="btn-nav-white">
                 <a href="quiz.html">
                     <h3>QUIZ</h3>
@@ -56,7 +44,29 @@
             <div class="btn-logout" onclick="limparSessao()">
                 <h3>Sair</h3>
             </div>
-
+        </div>
+        <div id="home" class="home">
+            <div class="metricas">
+                <div class="card">
+                    <h2>TIPO DE COMIDA FAVORITO DA COMUNIDADE</h2>
+                    <p>Italiana</p>
+                </div>
+                <div class="card">
+                    <h2>PONTUAÇÃO MÉDIA ATINGIDA NO QUIZ</h2>
+                    <p>10/15</p>
+                </div>
+                <div class="outros">
+                    <button><a href="quiz.html">JOGAR QUIZ</a></button>
+                    <button><a href="#receitas">VER RECEITAS</a></button>
+                </div>
+            </div>
+            <div class="forum">
+                <h2>ACOMPANHE AS DISCUSSÕES</h2>
+                <div class="acompanhar">
+    
+                </div>
+            </div>
+    
         </div>
 
         <div class="dash">
