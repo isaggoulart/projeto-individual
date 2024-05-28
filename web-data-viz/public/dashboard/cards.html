@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
 </head>
 
-<body onload="validarSessao(), atualizacaoPeriodica()">
+<body onload="validarSessao(), listar(), listar2()">
 
     <div class="janela">
         <div class="header-left dash-header">
@@ -26,8 +26,8 @@
             </div>
             <div class="btn-nav-white">
                 <a href="receitas.html">
-                <h3>RECEITAS</h3>
-            </a>
+                    <h3>RECEITAS</h3>
+                </a>
             </div>
             <div class="btn-nav-white">
                 <a href="quiz.html">
@@ -49,11 +49,11 @@
             <div class="metricas">
                 <div class="card">
                     <h2>TIPO DE COMIDA FAVORITO DA COMUNIDADE</h2>
-                    <p>Italiana</p>
+                    <span id="comida_favorita"><span>
                 </div>
                 <div class="card">
                     <h2>PONTUAÇÃO MÉDIA ATINGIDA NO QUIZ</h2>
-                    <p>10/15</p>
+                    <span id="pontuacao_media"></span>
                 </div>
                 <div class="outros">
                     <button><a href="quiz.html">JOGAR QUIZ</a></button>
@@ -63,10 +63,10 @@
             <div class="forum">
                 <h2>ACOMPANHE AS DISCUSSÕES</h2>
                 <div class="acompanhar">
-    
+
                 </div>
             </div>
-    
+
         </div>
 
         <div class="dash">
@@ -84,25 +84,47 @@
 </body>
 
 <script>
+    function listar() {
+        fetch("/metricas/listar", {
+            method: "GET",
+            headers: {
+                "Content-Type": 'application\json'
+            }
+        }).then(function (resposta) {
 
-    function exibirAquarios() {
-        JSON.parse(sessionStorage.AQUARIOS).forEach(item => {
-            document.getElementById("cardAquarios").innerHTML += `
-                    <div class="card-aquario">
-                        <div class="title-aquario">
-                            <h1>${item.descricao}</h1>
-                        </div>
-                        <div class="desc-aquario">
-                        <div class="temperatura">
-                            <p id="temp_aquario_${item.id}">-°C</p>
-                        </div>
-                        <div class="cor-alerta" id="card_${item.id}"></div>
-                    </div>
-                    </div>
-                    `
-        });
+            console.log("Estou no then do listar")
+
+            if (resposta.ok) {
+                console.log("Função listar():");
+
+                resposta.json().then(function (resposta) {
+                    var dados = resposta[0];
+
+                    comida_favorita.innerHTML = dados.tipoComida;
+                })
+            }})
     }
 
+    function listar2() {
+        fetch("/metricas/listar2", {
+            method: "GET",
+            headers: {
+                "Content-Type": 'application\json'
+            }
+        }).then(function (resposta) {
+
+            console.log("Estou no then do listar2")
+
+            if (resposta.ok) {
+                console.log("Função listar2():");
+
+                resposta.json().then(function (resposta) {
+                    var dados2 = resposta[0];
+
+                    pontuacao_media.innerHTML = dados2.pontos;
+                })
+            }})
+    }
 </script>
 
 </html>
