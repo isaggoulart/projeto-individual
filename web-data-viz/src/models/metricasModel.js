@@ -11,7 +11,7 @@ function listar() {
 }
 
 function listar2() {
-    var instrucaoSql = `select truncate(avg(pontos), 0) from tentativa;`;
+    var instrucaoSql = `select truncate(avg(pontos), 0) as pontos from tentativa;`;
 
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);

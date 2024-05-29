@@ -96,15 +96,16 @@ body {
     height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     flex-direction: column;
+    margin-left: 100px;
 }
 
 .receitas .titulo {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 98vw;    
+    width: 80vw;    
 }
 
 .receitas .titulo span {
