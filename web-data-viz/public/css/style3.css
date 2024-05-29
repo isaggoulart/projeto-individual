@@ -25,7 +25,7 @@ body {
 }
 
 .metricas {
-    width: 40vw;
+    width: 37vw;
     height: 65vh;
     display: flex;
     flex-direction: column;
@@ -34,7 +34,7 @@ body {
 }
 
 .metricas .card {
-    width: 35vw;
+    width: 30vw;
     height: 18vh;
     border: solid 3px #FAC420;
     border-radius: 20px;
@@ -50,8 +50,9 @@ body {
     font-weight: 400;
     font-style: normal;
     letter-spacing: 2px;
-    font-size: 22px;
+    font-size: 20px;
     padding-top: 20px;
+    padding: 5px;
 }
 
 .metricas button {
@@ -71,34 +72,16 @@ body {
     cursor: pointer;
 }
 
-.forum {
-    width: 40vw;
-    height: 65vh;
-}
-
-.forum h2 {
-    font-family: "Chewy", system-ui;
-    font-weight: 400;
-    font-style: normal;
-    letter-spacing: 2px;
-    font-size: 22px;
-    text-align: center;
-}
-
-.forum .acompanhar {
-    width: 35vw;
-    height: 60vh;
-    background-color: #FAC420;
-}
 
 .receitas {
     width: 98vw;
-    height: 100vh;
+    height: 180vh;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-end;
     flex-direction: column;
     margin-left: 100px;
+    margin-top: 50px;
 }
 
 .receitas .titulo {
@@ -175,7 +158,6 @@ body {
 .descricao {
     width: 50vw;
     height: auto;
-    margin-left: 220px;
     margin-bottom: 40px;
     background-color: #459B69;
     border-radius: 20px;
@@ -183,7 +165,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 400px;
+    margin-right: 220px;
 }
 
 .descricao2 {
