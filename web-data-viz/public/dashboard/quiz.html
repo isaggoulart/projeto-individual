@@ -6,34 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz</title>
     <link rel="stylesheet" href="../css/style4.css">
+    <link rel="stylesheet" href="../css/dashboards.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
 </head>
 
-<body>
-    <div class="header">
-        <div class="container">
+<body onload="validarSessao()">
+    <div class="janela">
+        <div class="header-left dash-header">
             <img src="../assets/imgs/Logo.png">
-            <ul class="navbar">
-                <li>
-                    <a href="#home">Home</a>
-                </li>
-                <li>|</li>
-                <li>
-                    <a href="#receitas">Receitas</a>
-                </li>
-                <li>|</li>
-                <li>
-                    <a href="">Quiz</a>
-                </li>
-                <li>|</li>
-                <li>
-                    <a href="../index.html">Sair</a>
-                </li>
-                <button><a href="cadastro.html">CADASTRAR</a></button>
-                <button><a href="login.html">LOGIN</a></button>
-            </ul>
+            <div class="hello">
+                <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
+            </div><br><br>
+            <div class="btn-nav-white">
+                <a href="cards.html">
+                    <h3>HOME</h3>
+                </a>
+            </div>
+            <div class="btn-nav-white">
+                <a href="receitas.html">
+                    <h3>RECEITAS</h3>
+                </a>
+            </div>
+            <div class="btn-nav-white">
+                <a href="./mural.html">
+                    <h3>COMUNIDADE</h3>
+                </a>
+            </div>
         </div>
     </div>
     <div class="tudo">
@@ -204,6 +204,9 @@
 </html>
 
 <script>
+    b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+
+
     document.querySelectorAll('.questao').forEach(div => {
         div.style.display = 'none';
     });
