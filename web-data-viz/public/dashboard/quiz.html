@@ -195,7 +195,11 @@
                 <button onclick="cadastrar()">FINALIZAR QUIZ</button>
             </div>
 
-            <div id="finalizar" class="finalizar">
+            <div id="finalizar" class="finalizar"></div>
+            <div id= ranking class="ranking">
+                <span id="exibirUsuario"></span>
+                <span id="exibirRanking"></span>
+                <!-- <button><a href="quiz.html">JOGAR NOVAMENTE</a></button> -->
             </div>
         </div>
     </div>
@@ -210,7 +214,8 @@
     document.querySelectorAll('.questao').forEach(div => {
         div.style.display = 'none';
     });
-    finalizar.style.display = 'none'
+    finalizar.style.display = 'none';
+    ranking.style.display = 'none';
     var pontuacao = 0;
 
 
@@ -319,23 +324,53 @@
         if (pontuacao < 6) finalizar.innerHTML += `Você com certeza passaria fome se sua alimentação dependesse apenas de você!  <br><br>`;
         else if (pontuacao < 10) finalizar.innerHTML += `Está no caminho, já consegue fazer os básicos e se virar bem na cozinha. <br><br>`
         else finalizar.innerHTML += `Já é praticamente um masterchef! Tem certeza de que não sabe cozinhar? <br> <br>`;
-        finalizar.innerHTML += `<button>VER RANKING</button>`;
+        finalizar.innerHTML += `<button onclick="verRanking()">VER RANKING</button>`;
 
         var pontuacaoVar = pontuacao;
         var fkUsuarioVar = sessionStorage.ID_USUARIO;
 
-        // Enviando o valor da nova input
         fetch("/quiz/cadastrar", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({
-                // crie um atributo que recebe o valor recuperado aqui
-                // Agora vá para o arquivo routes/quiz.js
                 pontuacaoServer: pontuacaoVar,
                 fkUsuarioServer: fkUsuarioVar
             }),
         });
     }
+
+    function verRanking() {
+        document.querySelectorAll('.questao').forEach(div => {
+            div.style.display = 'none';
+        });
+
+
+        finalizar.style.display = 'none';
+        ranking.style.display = 'flex';
+
+        fetch("/ranking/verRanking", {
+            method: "GET",
+            headers: {
+                "Content-Type": 'application\json'
+            }
+        }).then(function (resposta) {
+
+            console.log("Estou no then do listar")
+
+            if (resposta.ok) {
+                console.log("Função verRanking():");
+
+                resposta.json().then(function (resposta) {
+                    for (var index = 0; index < resposta.length; index ++) {
+                    var dados = resposta[index];
+                    exibirUsuario.innerHTML += `${dados.Usuário.toUpperCase()} <br>`
+                    exibirRanking.innerHTML += ` ${dados.Pontuação} <br>`;
+                    } 
+                })
+            }
+        })
+    }
+
 </script>

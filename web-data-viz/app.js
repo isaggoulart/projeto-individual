@@ -21,6 +21,7 @@ var avisosRouter = require("./src/routes/avisos");
 var aquariosRouter = require("./src/routes/aquarios");
 var quizRouter = require("./src/routes/quiz")
 var metricasRouter = require("./src/routes/metricas")
+var rankingRouter = require("./src/routes/ranking")
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -33,6 +34,8 @@ app.use("/quiz", quizRouter);
 app.use("/avisos", avisosRouter);
 app.use("/aquarios", aquariosRouter);
 app.use("/metricas", metricasRouter);
+app.use("/ranking", rankingRouter);
+
 
 app.listen(PORTA_APP, function () {
     console.log(`
