@@ -10,7 +10,6 @@ body {
   display: none;
 }
 
-
 .loading-div img {
   height: 50px;
   width: 50px;
@@ -98,7 +97,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 45vw;
-    height: 75vh;
+    height: 79vh;
     background-color: #459B69;
     border-radius: 20px;
 }
@@ -171,13 +170,6 @@ input {
     font-style: normal;
 }
 
-.mensagem {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
 .card_erro {
   display: none;
   color: #fff;
@@ -192,6 +184,11 @@ input {
   font-weight: 500;
   font-size: 20px;
   letter-spacing: 1px;
+}
+
+.card_erro #mensagem_erro img {
+  width: 50px;
+  height: 50px;
 }
 
 

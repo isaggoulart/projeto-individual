@@ -47,7 +47,6 @@
   </div>
 
   <div class="tudo">
-    <div class="container">
       <div class="container">
         <div class="titulo">
           <h1>CADASTRE-SE</h1>
@@ -78,14 +77,12 @@
         <div class="card_erro" id="cardErro">
           <span id="mensagem_erro"></span>
           <div id="div_aguardar" class="loading-div">
-            <img src="assets/aguarde-orange.gif" id="loading-gif" />
+
           </div>
-        </div>
       </div>
-    </div>
-        <div id="div_erros_login"></div>
       </div>
- 
+  </div>
+
 </body>
 
 </html>
@@ -94,14 +91,20 @@
   function cadastrar() {
     aguardar();
 
-    //Recupere o valor da nova input pelo nome do id
-    // Agora vá para o método fetch logo abaixo
     var nomeVar = nome_input.value;
     var emailVar = email_input.value;
     var senhaVar = senha_input.value;
     var dtNascVar = dtNasc_input.value;
     var confirmacaoSenhaVar = confSenha_input.value;
     var comidaVar = listaComidas.value;
+
+
+    var tamanhoNome = nomeVar.length;
+    var arroba = emailVar.indexOf('@');
+    var ponto = emailVar.indexOf('.');
+    var tamanhoSenha = senhaVar.length;
+    var tamanhoDtNasc = dtNascVar.length;
+
     if (
       nomeVar == "" ||
       emailVar == "" ||
@@ -120,15 +123,57 @@
       setInterval(sumirMensagem, 5000);
     }
 
-    // Enviando o valor da nova input
+    if (tamanhoNome <= 1) {
+      cardErro.style.display = "block";
+      mensagem_erro.innerHTML =
+        "O nome inserido é inválido!";
+
+      finalizarAguardar();
+      return false;
+    }
+
+    if (arroba < 0 || ponto < 0) {
+      cardErro.style.display = "block";
+      mensagem_erro.innerHTML =
+        "O e-mail inserido é inválido!";
+
+      finalizarAguardar();
+      return false;
+    }
+
+    if (tamanhoSenha < 8) {
+      cardErro.style.display = "block";
+      mensagem_erro.innerHTML =
+        "A senha deve ter ao menos 8 caracteres!";
+
+      finalizarAguardar();
+      return false;
+    }
+
+    if (confirmacaoSenhaVar != senhaVar) {
+      cardErro.style.display = "block";
+      mensagem_erro.innerHTML =
+        "A confirmação de senha falhou!";
+
+      finalizarAguardar();
+      return false;
+    }
+
+    if (tamanhoDtNasc > 10) {
+      cardErro.style.display = "block";
+      mensagem_erro.innerHTML =
+        "A data de nascimento inserida é inválida!";
+
+      finalizarAguardar();
+      return false;
+    }
+
     fetch("/usuarios/cadastrar", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        // crie um atributo que recebe o valor recuperado aqui
-        // Agora vá para o arquivo routes/usuario.js
         nomeServer: nomeVar,
         emailServer: emailVar,
         senhaServer: senhaVar,
@@ -144,7 +189,8 @@
           cardErro.style.display = "block";
           div_aguardar.style.display = 'block';
           mensagem_erro.innerHTML =
-            "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+            `Cadastro realizado com sucesso! Redirecionando para o cadastro... <br>
+            <img src="assets/aguarde-orange.gif" id="loading-gif">`
 
           setTimeout(() => {
             window.location = "login.html";
