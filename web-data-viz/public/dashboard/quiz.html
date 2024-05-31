@@ -160,7 +160,7 @@
             </div>
 
             <div id="questao10" class="questao">
-                <span>Proporção de água para cozinhar arroz?</span>
+                <span>Como escolher limão no supermercado?</span>
                 <div class="respostas">
                     <input name="q10" type="radio" id="q10_alt1"> A casca deve ser dura <br><br>
                     <input name="q10" type="radio" id="q10_alt2"> Ele deve ser do verde mais escuro que você encontrar
@@ -196,10 +196,12 @@
             </div>
 
             <div id="finalizar" class="finalizar"></div>
-            <div id= ranking class="ranking">
-                <span id="exibirUsuario"></span>
-                <span id="exibirRanking"></span>
-                <!-- <button><a href="quiz.html">JOGAR NOVAMENTE</a></button> -->
+            <div id=ranking class="ranking">
+                <div class="ranking2">
+                    <span id="exibirUsuario"></span>
+                    <span id="exibirRanking"></span>
+                </div>
+                <button><a href="quiz.html">JOGAR NOVAMENTE</a></button>
             </div>
         </div>
     </div>
@@ -253,7 +255,7 @@
             div.style.display = 'none';
         });
         questao5.style.display = 'flex';
-        if (document.getElementById('q4_alt4').checked) pontuacao++;
+        if (document.getElementById('q4_alt4').checked) pontuacao += 2;
     }
 
     function q5() {
@@ -261,7 +263,7 @@
             div.style.display = 'none';
         });
         questao6.style.display = 'flex';
-        if (document.getElementById('q5_alt2').checked) pontuacao++;
+        if (document.getElementById('q5_alt2').checked) pontuacao += 2;
     }
 
     function q6() {
@@ -269,7 +271,7 @@
             div.style.display = 'none';
         });
         questao7.style.display = 'flex';
-        if (document.getElementById('q6_alt4').checked) pontuacao++;
+        if (document.getElementById('q6_alt4').checked) pontuacao += 2;
     }
 
     function q7() {
@@ -277,7 +279,7 @@
             div.style.display = 'none';
         });
         questao8.style.display = 'flex';
-        if (document.getElementById('q7_alt1').checked) pontuacao++;
+        if (document.getElementById('q7_alt1').checked) pontuacao += 3;
     }
 
     function q8() {
@@ -285,7 +287,7 @@
             div.style.display = 'none';
         });
         questao9.style.display = 'flex';
-        if (document.getElementById('q8_alt2').checked) pontuacao++;
+        if (document.getElementById('q8_alt2').checked) pontuacao += 3;
     }
 
     function q9() {
@@ -293,7 +295,7 @@
             div.style.display = 'none';
         });
         questao10.style.display = 'flex';
-        if (document.getElementById('q9_alt3').checked) pontuacao++;
+        if (document.getElementById('q9_alt3').checked) pontuacao += 3;
     }
 
     function q10() {
@@ -301,7 +303,7 @@
             div.style.display = 'none';
         });
         questao11.style.display = 'flex';
-        if (document.getElementById('q10_alt4').checked) pontuacao++;
+        if (document.getElementById('q10_alt4').checked) pontuacao += 4;
     }
 
     function q11() {
@@ -309,7 +311,7 @@
             div.style.display = 'none';
         });
         questao12.style.display = 'flex';
-        if (document.getElementById('q11_alt1').checked) pontuacao++;
+        if (document.getElementById('q11_alt1').checked) pontuacao += 4;
     }
 
 
@@ -318,11 +320,11 @@
             div.style.display = 'none';
         });
         finalizar.style.display = 'flex';
-        if (document.getElementById('q12_alt3').checked) pontuacao++;
+        if (document.getElementById('q12_alt3').checked) pontuacao += 4;
 
-        finalizar.innerHTML = `<img src="../assets/imgs/finalizar.png"> <br>    <span style="font-size: 30px;">Você acertou <span style="color: #FAC420;">${pontuacao}/12</span> perguntas!</span><br><br>`;
-        if (pontuacao < 6) finalizar.innerHTML += `Você com certeza passaria fome se sua alimentação dependesse apenas de você!  <br><br>`;
-        else if (pontuacao < 10) finalizar.innerHTML += `Está no caminho, já consegue fazer os básicos e se virar bem na cozinha. <br><br>`
+        finalizar.innerHTML = `<img src="../assets/imgs/finalizar.png"> <br>    <span style="font-size: 30px;">Você fez <span style="color: #FAC420;">${pontuacao}/30</span> pontos!</span><br><br>`;
+        if (pontuacao < 10) finalizar.innerHTML += `Você com certeza passaria fome se sua alimentação dependesse apenas de você!  <br><br>`;
+        else if (pontuacao < 21) finalizar.innerHTML += `Está no caminho, já consegue fazer os básicos e se virar bem na cozinha. <br><br>`
         else finalizar.innerHTML += `Já é praticamente um masterchef! Tem certeza de que não sabe cozinhar? <br> <br>`;
         finalizar.innerHTML += `<button onclick="verRanking()">VER RANKING</button>`;
 
@@ -363,11 +365,11 @@
                 console.log("Função verRanking():");
 
                 resposta.json().then(function (resposta) {
-                    for (var index = 0; index < resposta.length; index ++) {
-                    var dados = resposta[index];
-                    exibirUsuario.innerHTML += `${dados.Usuário.toUpperCase()} <br>`
-                    exibirRanking.innerHTML += ` ${dados.Pontuação} <br>`;
-                    } 
+                    for (var index = 0; index < resposta.length; index++) {
+                        var dados = resposta[index];
+                        exibirUsuario.innerHTML += `${dados.Usuário.toUpperCase()} <br>`
+                        exibirRanking.innerHTML += ` ${dados.Pontuação} <br>`;
+                    }
                 })
             }
         })
