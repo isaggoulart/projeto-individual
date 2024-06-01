@@ -367,8 +367,14 @@
                 resposta.json().then(function (resposta) {
                     for (var index = 0; index < resposta.length; index++) {
                         var dados = resposta[index];
+
+                        if (index < 3) {
+                            exibirUsuario.innerHTML += `<span style="color: #FAC420;">${dados.Usuário.toUpperCase()} </span><br>`
+                            exibirRanking.innerHTML += `<span style="color: #FAC420;">${dados.Pontuação} </span><br>`;
+                        } else {
                         exibirUsuario.innerHTML += `${dados.Usuário.toUpperCase()} <br>`
                         exibirRanking.innerHTML += ` ${dados.Pontuação} <br>`;
+                        }
                     }
                 })
             }
