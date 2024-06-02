@@ -17,7 +17,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
-<body onload="validarSessao(), listar(), listar2()">
+<body onload="validarSessao(), listar(), listar2(), obterDadosGrafico()">
 
     <div class="janela">
         <div class="header-left dash-header">
@@ -65,7 +65,8 @@
 
         </div>
 
-        <div id="graficos" class="dash"></div>
+        <div style="width: 450px; padding: 60px;" id="graficos" class="dash"></div>
+        
     </div>
 
 </body>
@@ -118,81 +119,84 @@
         })
     }
 
-//     window.onload = obterDadosGrafico();
+    function obterDadosGrafico() {
 
-//     function obterDadosGrafico() {
+        document.getElementById("graficos").innerHTML += `<canvas style="width: 600px; height: 600px;" id="myChartCanvas"></canvas>`;
 
-//     document.getElementById("graficos").innerHTML += `
-// //                         <canvas id="myChartCanvas"></canvas>
-// //             `
-//         fetch(`/medidas/grafico1/`, { cache: 'no-store' }).then(function (response) {
-//             if (response.ok) {
-//                 response.json().then(function (resposta) {
-//                     console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
-//                     resposta.reverse();
+        fetch("/medidas/grafico1/", {
+            method: "GET",
+            cache: 'no-store',
+            headers: {
+                "Content-Type": 'application/json'
+            }
+        }).then(function (response) {
+            if (response.ok) {
+                response.json().then(function (resposta) {
+                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                    resposta.reverse();
 
-//                     plotarGrafico(resposta);
+                    plotarGrafico(resposta);
 
-//                 });
-//             } else {
-//                 console.error('Nenhum dado encontrado ou erro na API');
-//             }
-//         })
-//             .catch(function (error) {
-//                 console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
-//             });
-//     }
+                });
+            } else {
+                console.error('Nenhum dado encontrado ou erro na API');
+            }
+        })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+            });
+    }
 
-//     function plotarGrafico(resposta) {
+    function plotarGrafico(resposta) {
 
-//         console.log('iniciando plotagem do gráfico...');
+        console.log('iniciando plotagem do gráfico...');
 
-//         // Criando estrutura para plotar gráfico - labels
-//         let labels = [];
+        // Criando estrutura para plotar gráfico - labels
+        let labels = [];
 
-//         // Criando estrutura para plotar gráfico - dados
-//         let dados = {
-//             labels: labels,
-//             datasets: [{
-//                 label: 'Tipo da comida',
-//                 data: [],
-//                 fill: false,
-//                 borderColor: 'rgb(75, 192, 192)',
-//                 tension: 0.1
-//             }]
-//         };
+        // Criando estrutura para plotar gráfico - dados
+        let dados = {
+            labels: labels,
+            datasets: [{
+                label: 'Tipo da comida',
+                data: [],
+                fill: true,
+                backgroundColor: '#FAC420',
+                tension: 0.1
+            }]
+        };
 
-//         console.log('----------------------------------------------')
-//         console.log('Estes dados foram recebidos pela funcao "obterDadosGrafico" e passados para "plotarGrafico":')
-//         console.log(resposta)
+        console.log('----------------------------------------------')
+        console.log('Estes dados foram recebidos pela funcao "obterDadosGrafico" e passados para "plotarGrafico":')
+        console.log(resposta)
 
-//         // Inserindo valores recebidos em estrutura para plotar o gráfico
-//         for (i = 0; i < resposta.length; i++) {
-//             var registro = resposta[i];
-//             labels.push(registro.TipoComida);
-//             dados.datasets[0].data.push(registro.Contagem);
-//         }
+        // Inserindo valores recebidos em estrutura para plotar o gráfico
+        for (i = 0; i < resposta.length; i++) {
+            var registro = resposta[i];
+            labels.push(registro.TipoComida);
+            dados.datasets[0].data.push(registro.Contagem);
+        }
 
-//         console.log('----------------------------------------------')
-//         console.log('O gráfico será plotado com os respectivos valores:')
-//         console.log('Labels:')
-//         console.log(labels)
-//         console.log('Dados:')
-//         console.log(dados.datasets)
-//         console.log('----------------------------------------------')
+        console.log('----------------------------------------------')
+        console.log('O gráfico será plotado com os respectivos valores:')
+        console.log('Labels:')
+        console.log(labels)
+        console.log('Dados:')
+        console.log(dados.datasets)
+        console.log('----------------------------------------------')
 
-//         // Criando estrutura para plotar gráfico - config
-//         const config = {
-//             type: 'bar',
-//             data: dados,
-//         };
+        // Criando estrutura para plotar gráfico - config
+        const config = {
+            type: 'bar',
+            data: dados
+        };
 
-//         // Adicionando gráfico criado em div na tela
-//         let myChart = new Chart(
-//             document.getElementById(`myChartCanvas`),
-//             config
-//         );
-//     }
-// </script>
+        // Adicionando gráfico criado em div na tela
+        let myChart = new Chart(
+            document.getElementById(`myChartCanvas`),
+            config
+        );
+    }
+</script>
 
 </html>
