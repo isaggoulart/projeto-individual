@@ -25,6 +25,19 @@ function grafico1() {
     return database.executar(instrucaoSql);
 }
 
+
+function grafico2() {
+
+    var instrucaoSql = `SELECT 
+    COUNT(CASE WHEN pontos <= 15 THEN 1 END) AS MenosMetade,
+    COUNT(CASE WHEN pontos > 15 THEN 1 END) AS MaisMetade
+FROM tentativa`;
+
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    return database.executar(instrucaoSql);
+}
+
 module.exports = {
-    grafico1
+    grafico1,
+    grafico2
 }

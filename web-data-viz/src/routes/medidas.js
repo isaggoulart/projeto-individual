@@ -11,4 +11,8 @@ router.get("/grafico1", function (req, res) {
     medidaController.grafico1(req, res);
 })
 
+router.get("/grafico2", function (req, res) {
+    medidaController.grafico2(req, res);
+})
+
 module.exports = router;

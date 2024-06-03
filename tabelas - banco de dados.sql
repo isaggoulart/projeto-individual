@@ -45,3 +45,14 @@ order by pontos desc
 limit 10;
 
 truncate table tentativa;
+
+select tipoComida as TipoComida,  count(tipoComida) as Contagem
+from usuario
+group by tipoComida;
+
+SELECT 
+    COUNT(CASE WHEN pontos <= 15 THEN 1 END) AS MenosMetade,
+    COUNT(CASE WHEN pontos > 15 THEN 1 END) AS MaisMetade
+FROM tentativa;
+
+
