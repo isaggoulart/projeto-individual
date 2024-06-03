@@ -22,10 +22,10 @@ pontos int
 CREATE TABLE aviso (
 	id INT PRIMARY KEY AUTO_INCREMENT,
 	titulo VARCHAR(100),
-	descricao VARCHAR(150),
+	descricao VARCHAR(300),
 	fk_usuario INT,
 	FOREIGN KEY (fk_usuario) REFERENCES usuario(id)
-);
+); 
 
 
 select * from usuario;
@@ -54,5 +54,9 @@ SELECT
     COUNT(CASE WHEN pontos <= 15 THEN 1 END) AS MenosMetade,
     COUNT(CASE WHEN pontos > 15 THEN 1 END) AS MaisMetade
 FROM tentativa;
+
+
+truncate table tentativa;
+truncate table aviso;
 
 
