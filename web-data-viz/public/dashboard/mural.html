@@ -53,25 +53,25 @@
                             <label>
                                 Título:
                                 <br><br>
-                                <input name="titulo" id="titulo" maxlength="100" type="text">
+                                <input name="titulo" id="titulo" maxlength="60" type="text">
                             </label>
                             <br>
                             <br>
                             <label>
-                                Descrição (máximo de 250 caracteres):
+                                Descrição (máximo de 300 caracteres):
                                 <br><br>
-                                <textarea name="descricao" id="textarea_descricao" maxlength="250" rows="5"></textarea>
+                                <textarea name="descricao" id="textarea_descricao" maxlength="300" rows="5"></textarea>
                             </label>
                             <br>
                             <br>
                             <button>ENVIAR</button>
                         </form>
-                    </div>
-                    <h1>POSTAGENS</h1>
-                    <div class="div-results">
-                        <div id="feed_container" class="feed-container">
+                        <div class="div-results">
+                            <div id="feed_container" class="feed-container">
+                            </div>
                         </div>
                     </div>
+                  
                 </div>
             </div>
         </div>
@@ -111,7 +111,6 @@
             console.log("resposta: ", resposta);
 
             if (resposta.ok) {
-                window.alert("Post realizado com sucesso pelo usuario de ID: " + idUsuario + "!");
                 window.location = "/dashboard/mural.html";
                 limparFormulario();
                 finalizarAguardar();
@@ -167,12 +166,11 @@
 
                     var feed = document.getElementById("feed_container");
                     feed.innerHTML = "";
-                    for (let i = 0; i < resposta.length; i++) {
+                    for (let i = resposta.length - 1; i >= 0; i--) {
                         var publicacao = resposta[i];
 
                         // criando e manipulando elementos do HTML via JavaScript
                         var divPublicacao = document.createElement("div");
-                        var spanID = document.createElement("span");
                         var spanTitulo = document.createElement("span");
                         var spanNome = document.createElement("span");
                         var divDescricao = document.createElement("div");
@@ -180,7 +178,6 @@
                         var btnDeletar = document.createElement("button");
 
 
-                        spanID.innerHTML = "ID: <b>" + publicacao.idAviso + "</b>";
                         spanTitulo.innerHTML = "Título: <b>" + publicacao.titulo + "</b>";
                         spanNome.innerHTML = "Autor: <b>" + publicacao.nome + "</b>";
                         divDescricao.innerHTML = "Descrição: <b>" + publicacao.descricao + "</b>";
@@ -198,7 +195,6 @@
                         btnDeletar.id = "btnDeletar" + publicacao.idAviso;
                         btnDeletar.setAttribute("onclick", `deletar(${publicacao.idAviso})`);
 
-                        divPublicacao.appendChild(spanID);
                         divPublicacao.appendChild(spanNome);
                         divPublicacao.appendChild(spanTitulo);
                         divPublicacao.appendChild(divDescricao);

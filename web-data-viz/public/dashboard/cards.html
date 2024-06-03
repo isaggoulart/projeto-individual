@@ -17,7 +17,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
-<body onload="validarSessao(), listar(), listar2(), obterDadosGrafico(), obterDadosGrafico2()">
+<body onload="listar(), listar2(), obterDadosGrafico(), obterDadosGrafico2()">
 
     <div class="janela">
         <div class="header-left dash-header">
@@ -151,10 +151,8 @@
 
         console.log('iniciando plotagem do gráfico...');
 
-        // Criando estrutura para plotar gráfico - labels
         let labels = [];
 
-        // Criando estrutura para plotar gráfico - dados
         let dados = {
             labels: labels,
             datasets: [{
@@ -170,7 +168,6 @@
         console.log('Estes dados foram recebidos pela funcao "obterDadosGrafico" e passados para "plotarGrafico":')
         console.log(resposta)
 
-        // Inserindo valores recebidos em estrutura para plotar o gráfico
         for (i = 0; i < resposta.length; i++) {
             var registro = resposta[i];
             labels.push(registro.TipoComida);
@@ -185,13 +182,11 @@
         console.log(dados.datasets)
         console.log('----------------------------------------------')
 
-        // Criando estrutura para plotar gráfico - config
         const config = {
             type: 'bar',
             data: dados
         };
 
-        // Adicionando gráfico criado em div na tela
         let myChart = new Chart(
             document.getElementById(`myChartCanvas`),
             config
@@ -231,14 +226,12 @@
 
         console.log('iniciando plotagem do gráfico...');
 
-        // Criando estrutura para plotar gráfico - labels
         let labels = [];
 
-        // Criando estrutura para plotar gráfico - dados
         let dados = {
-            labels: ['Pontos <= 15', 'Pontos > 15'],
+            labels: ['Pontos abaixo de 15', 'Pontos acima de 15'],
             datasets: [{
-                label: 'Pontuação',
+                label: 'Contagem',
                 data: [],
                 fill: true,
                 backgroundColor: ['#FAC420', '#459B69'],
@@ -250,7 +243,6 @@
         console.log('Estes dados foram recebidos pela funcao "obterDadosGrafico" e passados para "plotarGrafico":')
         console.log(resposta)
 
-        // Inserindo valores recebidos em estrutura para plotar o gráfico
         for (i = 0; i < resposta.length; i++) {
             var registro = resposta[i];
             labels.push(registro.MenosMetade);
@@ -267,7 +259,6 @@
         console.log(dados.datasets)
         console.log('----------------------------------------------')
 
-        // Criando estrutura para plotar gráfico - config
         const config = {
             type: 'pie',
             data: dados,
@@ -278,7 +269,6 @@
             }}
         };
 
-        // Adicionando gráfico criado em div na tela
         let myChart = new Chart(
             document.getElementById(`myChartCanvas2`),
             config
