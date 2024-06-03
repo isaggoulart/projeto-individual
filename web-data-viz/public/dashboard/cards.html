@@ -17,7 +17,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
-<body onload="validarSessao(), listar(), listar2(), obterDadosGrafico()">
+<body onload="validarSessao(), listar(), listar2(), obterDadosGrafico(), obterDadosGrafico2()">
 
     <div class="janela">
         <div class="header-left dash-header">
@@ -65,8 +65,8 @@
 
         </div>
 
-        <div style="width: 450px; padding: 60px;" id="graficos" class="dash"></div>
-        
+        <div style="width: 500px; height: 270px; padding: 50px; margin-right: 60px;" id="graficos" class="dash"></div>
+
     </div>
 
 </body>
@@ -121,7 +121,7 @@
 
     function obterDadosGrafico() {
 
-        document.getElementById("graficos").innerHTML += `<canvas style="width: 600px; height: 600px;" id="myChartCanvas"></canvas>`;
+        document.getElementById("graficos").innerHTML += `<span>COMIDAS FAVORITAS DOS USUÁRIOS</span><br><br><canvas style="width: 600px; height: 500px;" id="myChartCanvas"></canvas><br><br>`;
 
         fetch("/medidas/grafico1/", {
             method: "GET",
@@ -194,6 +194,93 @@
         // Adicionando gráfico criado em div na tela
         let myChart = new Chart(
             document.getElementById(`myChartCanvas`),
+            config
+        );
+    }
+
+
+    function obterDadosGrafico2() {
+
+        document.getElementById("graficos").innerHTML += `<span> PONTUAÇÃO DOS USUÁRIOS</span><br> <br><canvas style="width: 500px; height: 400px;" id="myChartCanvas2"></canvas>`;
+
+        fetch("/medidas/grafico2/", {
+            method: "GET",
+            cache: 'no-store',
+            headers: {
+                "Content-Type": 'application/json'
+            }
+        }).then(function (response) {
+            if (response.ok) {
+                response.json().then(function (resposta) {
+                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                    resposta.reverse();
+
+                    plotarGrafico2(resposta);
+
+                });
+            } else {
+                console.error('Nenhum dado encontrado ou erro na API');
+            }
+        })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+            });
+    }
+
+    function plotarGrafico2(resposta) {
+
+        console.log('iniciando plotagem do gráfico...');
+
+        // Criando estrutura para plotar gráfico - labels
+        let labels = [];
+
+        // Criando estrutura para plotar gráfico - dados
+        let dados = {
+            labels: ['Pontos <= 15', 'Pontos > 15'],
+            datasets: [{
+                label: 'Pontuação',
+                data: [],
+                fill: true,
+                backgroundColor: ['#FAC420', '#459B69'],
+                borderColor: 'transparent'
+            }]
+        };
+
+        console.log('----------------------------------------------')
+        console.log('Estes dados foram recebidos pela funcao "obterDadosGrafico" e passados para "plotarGrafico":')
+        console.log(resposta)
+
+        // Inserindo valores recebidos em estrutura para plotar o gráfico
+        for (i = 0; i < resposta.length; i++) {
+            var registro = resposta[i];
+            labels.push(registro.MenosMetade);
+            labels.push(registro.MaisMetade);
+            dados.datasets[0].data.push(registro.MenosMetade);
+            dados.datasets[0].data.push(registro.MaisMetade);
+        }
+
+        console.log('----------------------------------------------')
+        console.log('O gráfico será plotado com os respectivos valores:')
+        console.log('Labels:')
+        console.log(labels)
+        console.log('Dados:')
+        console.log(dados.datasets)
+        console.log('----------------------------------------------')
+
+        // Criando estrutura para plotar gráfico - config
+        const config = {
+            type: 'pie',
+            data: dados,
+            options: {
+            title: {
+                display: true,
+                text: 'Usuários que acertaram mais ou menos da metade no quiz'
+            }}
+        };
+
+        // Adicionando gráfico criado em div na tela
+        let myChart = new Chart(
+            document.getElementById(`myChartCanvas2`),
             config
         );
     }
