@@ -72,7 +72,6 @@
 
 
     function entrar() {
-        // aguardar();
 
         var emailVar = email_input.value;
         var senhaVar = senha_input.value;
@@ -80,7 +79,6 @@
         if (emailVar == "" || senhaVar == "") {
             cardErro.style.display = "block"
             mensagem_erro.innerHTML = "Todos os campos precisam estar preenchidos!";
-            finalizarAguardar();
             return false;
         }
         else {
@@ -106,7 +104,8 @@
                 console.log(resposta);
                 cardErro.style.display = 'block';
                 div_aguardar.style.display = 'block';
-                mensagem_erro.innerHTML = 'Login efetuado com sucesso! Redirecionando para a dashboard...'
+                mensagem_erro.innerHTML = 'Login efetuado com sucesso! Redirecionando para a dashboard...';
+
 
                 resposta.json().then(json => {
                     console.log(json);
@@ -118,17 +117,17 @@
                     setTimeout(function () {
                         
                         window.location = "./dashboard/cards.html";
-                    }, 2000); // apenas para exibir o loading
+                    }, 2000);
 
                 });
 
             } else {
-
+                cardErro.style.display = 'block';
+                mensagem_erro.innerHTML = "Houve um erro ao realizar o login! Verifique suas credenciais!";
                 console.log("Houve um erro ao tentar realizar o login!");
 
                 resposta.text().then(texto => {
                     console.error(texto);
-                    finalizarAguardar(texto);
                 });
             }
 

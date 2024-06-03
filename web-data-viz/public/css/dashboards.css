@@ -134,10 +134,6 @@ body {
   justify-content: flex-end;
 }
 
-.div-buttons>* {
-  margin-left: 30px;
-}
-
 .janela {
   display: flex;
 }
@@ -177,10 +173,6 @@ body {
   color: #fff;
   font-weight: 300;
   font-size: 1.2rem;
-}
-
-.hello h3 span {
-  font-weight: 800;
 }
 
 .btn-nav-white {
