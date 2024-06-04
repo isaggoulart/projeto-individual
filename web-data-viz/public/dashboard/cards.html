@@ -58,14 +58,14 @@
                 </div>
                 <div class="outros">
                     <button><a href="quiz.html">JOGAR QUIZ</a></button>
-                    <button><a href="#receitas">VER RECEITAS</a></button>
+                    <button><a href="receitas.html">VER RECEITAS</a></button>
                 </div>
             </div>
 
 
         </div>
 
-        <div style="width: 500px; height: 270px; padding: 50px; margin-right: 60px;" id="graficos" class="dash"></div>
+        <div style="width: 700px; height: 270px; padding: 50px; margin-right: 60px;" id="graficos" class="dash"></div>
 
     </div>
 
@@ -121,7 +121,7 @@
 
     function obterDadosGrafico() {
 
-        document.getElementById("graficos").innerHTML += `<span>COMIDAS FAVORITAS DOS USUÁRIOS</span><br><br><canvas style="width: 600px; height: 500px;" id="myChartCanvas"></canvas><br><br>`;
+        document.getElementById("graficos").innerHTML += `<span style="margin-left: 15%">COMIDAS FAVORITAS DOS USUÁRIOS</span><br><br><canvas style="width: 700px; height: 500px;" id="myChartCanvas"></canvas><br><br>`;
 
         fetch("/medidas/grafico1/", {
             method: "GET",
@@ -196,7 +196,7 @@
 
     function obterDadosGrafico2() {
 
-        document.getElementById("graficos").innerHTML += `<span> PONTUAÇÃO DOS USUÁRIOS</span><br> <br><canvas style="width: 500px; height: 400px;" id="myChartCanvas2"></canvas>`;
+        document.getElementById("graficos").innerHTML += `<span style="margin-left: 21%"> PONTUAÇÃO DOS USUÁRIOS</span><br> <br><canvas style="width: 700px; height: 400px; margin-left: 15%" id="myChartCanvas2"></canvas>`;
 
         fetch("/medidas/grafico2/", {
             method: "GET",
